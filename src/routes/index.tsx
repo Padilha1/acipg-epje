@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import { createFileRoute } from "@tanstack/react-router";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
 	ArrowRight,
 	Bed,
@@ -19,6 +20,8 @@ import {
 import { useRef } from "react";
 import { Footer } from "../components/layout/footer";
 import { Header } from "../components/layout/header";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -89,12 +92,129 @@ function Home() {
 
 	useGSAP(
 		() => {
-			gsap.from("[data-home-reveal]", {
+			const reduceMotion = window.matchMedia(
+				"(prefers-reduced-motion: reduce)",
+			).matches;
+
+			if (reduceMotion) {
+				gsap.set(
+					[
+						"[data-home-reveal]",
+						".event-countdown__grid",
+						".event-countdown__item",
+						".event-quicklink",
+						".event-section__heading",
+						".visit-card",
+						".event-timeline li",
+						".schedule-layout__media",
+						".official-hotel",
+						".hotel-mini",
+						".event-final-cta__panel",
+					],
+					{ clearProps: "all" },
+				);
+				return;
+			}
+
+			gsap.from(".event-hero [data-home-reveal]", {
 				y: 18,
 				opacity: 0,
 				duration: 0.75,
 				ease: "power2.out",
 				stagger: 0.08,
+			});
+
+			const revealGroup = (
+				trigger: string,
+				targets: string,
+				vars: gsap.TweenVars,
+				stagger = 0.08,
+			) => {
+				gsap.from(targets, {
+					...vars,
+					opacity: 0,
+					duration: vars.duration ?? 0.75,
+					ease: vars.ease ?? "power3.out",
+					stagger,
+					scrollTrigger: {
+						trigger,
+						start: "top 78%",
+						once: true,
+					},
+				});
+			};
+
+			revealGroup(".event-countdown", ".event-countdown__grid", {
+				y: 28,
+				scale: 0.98,
+			});
+
+			revealGroup(".event-countdown", ".event-countdown__item", {
+				y: 18,
+				scale: 0.92,
+				duration: 0.58,
+				ease: "back.out(1.7)",
+			});
+
+			revealGroup(".event-quicklinks", ".event-quicklink", {
+				y: 24,
+				rotateX: -12,
+				transformOrigin: "50% 100%",
+				duration: 0.68,
+			});
+
+			revealGroup("#visitas", "#visitas .event-section__heading", {
+				y: 28,
+			});
+
+			revealGroup("#visitas", ".visit-card", {
+				y: 42,
+				rotate: -1.5,
+				scale: 0.96,
+				duration: 0.72,
+			});
+
+			revealGroup("#programacao", "#programacao .event-section__heading", {
+				x: -28,
+			});
+
+			revealGroup("#programacao", ".event-timeline li", {
+				x: -34,
+				duration: 0.62,
+			});
+
+			revealGroup("#programacao", ".schedule-layout__media", {
+				x: 42,
+				scale: 0.96,
+				duration: 0.82,
+			});
+
+			revealGroup("#hospedagem", "#hospedagem .event-section__heading", {
+				y: 26,
+			});
+
+			revealGroup("#hospedagem", ".official-hotel", {
+				y: 38,
+				scale: 0.97,
+				duration: 0.82,
+			});
+
+			revealGroup("#hospedagem", ".hotel-mini", {
+				x: 30,
+				duration: 0.58,
+			});
+
+			gsap.from(".event-final-cta__panel", {
+				y: 34,
+				scale: 0.96,
+				opacity: 0,
+				duration: 0.85,
+				ease: "power3.out",
+				scrollTrigger: {
+					trigger: ".event-final-cta",
+					start: "top 78%",
+					once: true,
+				},
 			});
 		},
 		{ scope: pageRef },
