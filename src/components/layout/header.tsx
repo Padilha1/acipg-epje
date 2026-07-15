@@ -53,7 +53,7 @@ export function Header({ active, className }: HeaderProps) {
 				hash={active === "inicio" ? "inicio" : undefined}
 				aria-label="Página inicial Visita Técnica PG"
 			>
-				<img src="/logo.png" alt="Visita Técnica PG" />
+				<img src="/logo.webp" alt="Visita Técnica PG" />
 			</Link>
 			<nav className="event-nav" aria-label="Navegação principal">
 				{navItems.map((item) => (

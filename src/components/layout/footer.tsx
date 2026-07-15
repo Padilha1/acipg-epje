@@ -9,7 +9,7 @@ export function Footer() {
 				<div>
 					<img
 						className="event-footer__logo"
-						src="/logo.png"
+						src="/logo.webp"
 						alt="Visita Técnica PG"
 					/>
 					<p>
