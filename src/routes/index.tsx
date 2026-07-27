@@ -17,7 +17,7 @@ import {
 	Ticket,
 	Users,
 } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Footer } from "../components/layout/footer";
 import { Header } from "../components/layout/header";
 
@@ -25,26 +25,30 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const Route = createFileRoute("/")({ component: Home });
 
+const eventStartAt = new Date("2026-10-16T00:00:00-03:00").getTime();
+const slavieroBookingUrl =
+	"https://book.omnibees.com/chain/1409/hotel/15710?c=1409&currencyId=16&lang=pt-BR&q=15710";
+
 const visits = [
 	{
 		category: "Indústria de alimentos",
 		title: "Processamento Avançado",
 		description:
 			"Visite focos em automação de linha e controle de qualidade agroindustrial.",
-		time: "24 out. - 09:00",
+		time: "16 out. - 09:00",
 	},
 	{
 		category: "Madeira e papel",
 		title: "Hub de Inovação PG",
 		description:
 			"Explore laboratórios que conectam tecnologia, pesquisa e desenvolvimento.",
-		time: "25 out. - 14:00",
+		time: "16 out. - 14:00",
 	},
 	{
 		category: "Cooperativa agrícola",
 		title: "Logística de Safra",
 		description: "Veja operações de armazenamento e fluxo logístico no campo.",
-		time: "25 out. - 08:30",
+		time: "17 out. - 08:30",
 	},
 ];
 
@@ -80,15 +84,35 @@ const quickLinks = [
 	{ href: "/fotos", icon: Camera, label: "Fotos" },
 ];
 
-const countdown = [
-	["24", "dias"],
-	["12", "horas"],
-	["45", "minutos"],
-	["08", "segundos"],
-];
+function getCountdownItems() {
+	const totalSeconds = Math.max(
+		0,
+		Math.floor((eventStartAt - Date.now()) / 1000),
+	);
+	const days = Math.floor(totalSeconds / 86_400);
+	const hours = Math.floor((totalSeconds % 86_400) / 3_600);
+	const minutes = Math.floor((totalSeconds % 3_600) / 60);
+	const seconds = totalSeconds % 60;
+
+	return [
+		[String(days).padStart(2, "0"), "dias"],
+		[String(hours).padStart(2, "0"), "horas"],
+		[String(minutes).padStart(2, "0"), "minutos"],
+		[String(seconds).padStart(2, "0"), "segundos"],
+	];
+}
 
 function Home() {
 	const pageRef = useRef<HTMLDivElement>(null);
+	const [countdown, setCountdown] = useState(getCountdownItems);
+
+	useEffect(() => {
+		const interval = window.setInterval(() => {
+			setCountdown(getCountdownItems());
+		}, 1000);
+
+		return () => window.clearInterval(interval);
+	}, []);
 
 	useGSAP(
 		() => {
@@ -229,7 +253,7 @@ function Home() {
 					<div className="event-container event-hero__grid">
 						<div className="event-hero__content" data-home-reveal>
 							<span className="event-pill">
-								Ponta Grossa, PR - 24 a 26 de outubro, 2026
+								Ponta Grossa, PR - 16 e 17 de outubro, 2026
 							</span>
 							<h1>
 								Tudo o que você precisa para viver essa experiência em Ponta
@@ -377,33 +401,40 @@ function Home() {
 						</div>
 						<div className="lodging-layout">
 							<article className="official-hotel">
-								<div className="image-placeholder official-hotel__image">
-									<span>Hotel Oficial</span>
+								<div className="official-hotel__image">
+									<img
+										src="/slaviero-ponta-grossa.webp"
+										alt="Fachada do Slaviero Ponta Grossa"
+										loading="lazy"
+									/>
 								</div>
 								<div className="official-hotel__content">
 									<span className="event-pill event-pill--highlight">
 										<Hotel size={14} /> Hotel Oficial
 									</span>
-									<h3>Grande Hotel Premium</h3>
+									<h3>Slaviero Ponta Grossa</h3>
 									<ul>
 										<li>
-											<MapPin size={14} /> Av. Central, 1200 - Centro, Ponta
-											Grossa
+											<MapPin size={14} /> Av. Flex, 376 - Colônia Dona Luíza,
+											Ponta Grossa - PR
 										</li>
 										<li>
 											<CheckCircle2 size={14} /> Café da manhã incluso
 										</li>
 										<li>
-											<CheckCircle2 size={14} /> Transfer para as visitas
-											técnicas
+											<CheckCircle2 size={14} /> Estacionamento gratuito e Wi-Fi
+											gratuito
 										</li>
 										<li>
-											<CheckCircle2 size={14} /> Tarifa especial para inscritos
+											<CheckCircle2 size={14} /> Hotel oficial para a estadia dos
+											participantes
 										</li>
 									</ul>
 									<a
 										className="event-button event-button--primary"
-										href="#hospedagem"
+										href={slavieroBookingUrl}
+										target="_blank"
+										rel="noreferrer"
 									>
 										Reservar
 									</a>

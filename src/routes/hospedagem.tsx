@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
 	CheckCircle2,
-	Copy,
+	ExternalLink,
 	MapPin,
 	Navigation,
 	ShieldCheck,
@@ -13,6 +13,9 @@ import { Header } from "../components/layout/header";
 export const Route = createFileRoute("/hospedagem")({
 	component: LodgingPage,
 });
+
+const slavieroBookingUrl =
+	"https://book.omnibees.com/chain/1409/hotel/15710?c=1409&currencyId=16&lang=pt-BR&q=15710";
 
 const recommendedHotels = [
 	{
@@ -50,14 +53,19 @@ function LodgingPage() {
 
 					<section className="lodging-feature">
 						<div className="lodging-feature__media">
+							<img
+								src="/slaviero-ponta-grossa.webp"
+								alt="Fachada do Slaviero Ponta Grossa"
+								loading="eager"
+							/>
 							<span>Hotel Oficial do Evento</span>
 						</div>
 						<div className="lodging-feature__content">
-							<h1>Premium Executive Ponta Grossa</h1>
+							<h1>Slaviero Ponta Grossa</h1>
 							<p>
-								O ponto de encontro dos palestrantes e da organização, com
-								infraestrutura completa para descanso, networking e deslocamento
-								até os locais das visitas técnicas.
+								Hotel oficial do evento em Ponta Grossa, localizado na Avenida
+								Flex, 376, Colônia Dona Luíza. Uma base confortável para
+								descanso, networking e deslocamento durante a programação.
 							</p>
 							<ul>
 								<li>
@@ -65,21 +73,26 @@ function LodgingPage() {
 									alta velocidade.
 								</li>
 								<li>
-									<CheckCircle2 size={16} /> Transfer gratuito para os locais
-									das visitas técnicas.
+									<CheckCircle2 size={16} /> Estacionamento gratuito para
+									hóspedes.
 								</li>
 								<li>
-									<CheckCircle2 size={16} /> Early check-in e late check-out sob
-									disponibilidade.
+									<CheckCircle2 size={16} /> Avenida Flex, 376 - Colônia Dona
+									Luíza, Ponta Grossa - PR, 84043-450.
 								</li>
 							</ul>
 							<div className="lodging-coupon">
-								<span>Código promocional</span>
-								<strong>VISITAPG24</strong>
-								<p>Garanta 15% de desconto exclusivo para participantes.</p>
-								<Copy size={17} />
+								<span>Reserva oficial</span>
+								<strong>Slaviero Ponta Grossa</strong>
+								<p>Consulte disponibilidade e tarifas diretamente pelo hotel.</p>
+								<ExternalLink size={17} />
 							</div>
-							<a className="lodging-reserve-button" href="/#inscricao">
+							<a
+								className="lodging-reserve-button"
+								href={slavieroBookingUrl}
+								target="_blank"
+								rel="noreferrer"
+							>
 								Reservar agora
 							</a>
 						</div>
@@ -140,12 +153,12 @@ function LodgingPage() {
 								</p>
 								<iframe
 									title="Mapa de hospedagem em Ponta Grossa"
-									src="https://www.google.com/maps?q=Ponta%20Grossa%20PR%20Centro&output=embed"
+									src="https://www.google.com/maps?q=Slaviero%20Ponta%20Grossa%20Avenida%20Flex%20376&output=embed"
 									loading="lazy"
 									referrerPolicy="no-referrer-when-downgrade"
 								/>
 								<a
-									href="https://www.google.com/maps/search/hot%C3%A9is+Ponta+Grossa+PR"
+									href="https://www.google.com/maps/search/?api=1&query=Slaviero%20Ponta%20Grossa%20Avenida%20Flex%20376"
 									target="_blank"
 									rel="noreferrer"
 								>
