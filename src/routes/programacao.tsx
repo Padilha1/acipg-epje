@@ -17,7 +17,7 @@ export const Route = createFileRoute("/programacao")({
 const scheduleDays = [
 	{
 		id: "dia-1",
-		label: "Dia 1 - 24/Out",
+		label: "Dia 1 - 16/Out",
 		shortLabel: "Dia 1",
 		ctaTitle: "Garanta sua vaga no Dia 1",
 		ctaDescription:
@@ -75,7 +75,7 @@ const scheduleDays = [
 	},
 	{
 		id: "dia-2",
-		label: "Dia 2 - 25/Out",
+		label: "Dia 2 - 17/Out",
 		shortLabel: "Dia 2",
 		ctaTitle: "Garanta sua vaga no Dia 2",
 		ctaDescription:

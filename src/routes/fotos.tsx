@@ -13,13 +13,13 @@ const photoDays = [
 	{
 		id: "dia-1",
 		label: "Dia 01",
-		description: "24 de outubro - Abertura e networking",
+		description: "16 de outubro - Abertura e networking",
 		photos: ["Credenciamento", "Palestra de abertura", "Networking técnico"],
 	},
 	{
 		id: "dia-2",
 		label: "Dia 02",
-		description: "25 de outubro - Visitas industriais",
+		description: "17 de outubro - Visitas industriais",
 		photos: ["Linha de produção", "Automação industrial", "Foto oficial"],
 	},
 ];
