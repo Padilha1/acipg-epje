@@ -54,7 +54,7 @@ function LodgingPage() {
 					<section className="lodging-feature">
 						<div className="lodging-feature__media">
 							<img
-								src="/slaviero-ponta-grossa.webp"
+								src="/sponsors/slaviero-ponta-grossa.webp"
 								alt="Fachada do Slaviero Ponta Grossa"
 								loading="eager"
 							/>
@@ -82,9 +82,12 @@ function LodgingPage() {
 								</li>
 							</ul>
 							<div className="lodging-coupon">
-								<span>Reserva oficial</span>
-								<strong>Slaviero Ponta Grossa</strong>
-								<p>Consulte disponibilidade e tarifas diretamente pelo hotel.</p>
+								<span>Cupom de desconto</span>
+								<strong>EPJE15</strong>
+								<p>
+									Use o código na reserva para acessar as condições especiais do
+									evento.
+								</p>
 								<ExternalLink size={17} />
 							</div>
 							<a

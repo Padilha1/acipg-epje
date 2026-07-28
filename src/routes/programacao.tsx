@@ -19,9 +19,9 @@ const scheduleDays = [
 		id: "dia-1",
 		label: "Dia 1 - 16/Out",
 		shortLabel: "Dia 1",
-		ctaTitle: "Garanta sua vaga no Dia 1",
+		ctaTitle: "Confira a programação do Dia 1",
 		ctaDescription:
-			"As vagas para a visita técnica da Heineken são limitadas a 40 participantes por questões de segurança industrial.",
+			"A programação do primeiro dia será organizada por rotas técnicas e orientações operacionais específicas para cada visita.",
 		events: [
 			{
 				time: "08:00",
@@ -77,7 +77,7 @@ const scheduleDays = [
 		id: "dia-2",
 		label: "Dia 2 - 17/Out",
 		shortLabel: "Dia 2",
-		ctaTitle: "Garanta sua vaga no Dia 2",
+		ctaTitle: "Confira a programação do Dia 2",
 		ctaDescription:
 			"O segundo dia reúne rotas industriais e logísticas com grupos reduzidos para favorecer acompanhamento técnico e perguntas em campo.",
 		events: [

@@ -9,11 +9,9 @@ import {
 	CalendarDays,
 	Camera,
 	CheckCircle2,
-	Clock3,
 	Hotel,
 	MapPin,
 	Route as RouteIcon,
-	Sparkles,
 	Ticket,
 	Users,
 } from "lucide-react";
@@ -31,47 +29,40 @@ const slavieroBookingUrl =
 
 const visits = [
 	{
-		category: "Indústria de alimentos",
-		title: "Processamento Avançado",
-		description:
-			"Visite focos em automação de linha e controle de qualidade agroindustrial.",
-		time: "16 out. - 09:00",
+		category: "Agro",
+		title: "Cargill",
+		image: "/visits/cargill.webp",
+		imageTone: "agro",
 	},
 	{
-		category: "Madeira e papel",
-		title: "Hub de Inovação PG",
-		description:
-			"Explore laboratórios que conectam tecnologia, pesquisa e desenvolvimento.",
-		time: "16 out. - 14:00",
+		category: "Indústria",
+		title: "Heineken",
+		image: "/visits/heineken.webp",
+		imageTone: "industria",
 	},
 	{
-		category: "Cooperativa agrícola",
-		title: "Logística de Safra",
-		description: "Veja operações de armazenamento e fluxo logístico no campo.",
-		time: "17 out. - 08:30",
+		category: "Tecnologia e Inovação",
+		title: "Estação Hub",
+		image: "/visits/estacao-hub.webp",
+		imageTone: "tecnologia",
 	},
 ];
 
 const schedule = [
 	[
-		"08:00 - 09:00",
-		"Credenciamento e Welcome Coffee",
-		"Recepção dos participantes no hotel oficial e entrega dos kits.",
+		"10:00 - 13:30",
+		"Credenciamento",
+		"Recepção dos participantes no hotel oficial e retirada dos materiais.",
 	],
 	[
-		"09:30 - 12:00",
-		"Visita Técnica 01: Indústria Local",
-		"Saída em transporte executivo para a primeira planta industrial.",
+		"14:00 - 18:00",
+		"Visitas Técnicas",
+		"Saída para as empresas confirmadas e atividades técnicas no período da tarde.",
 	],
 	[
-		"12:30 - 14:00",
-		"Almoço de Networking",
-		"Momento livre para integração entre profissionais e palestrantes.",
-	],
-	[
-		"14:30 - 17:30",
-		"Visita Técnica 02: Centro de Pesquisa",
-		"Imersão em laboratórios de biotecnologia e inovação de campo.",
+		"A partir das 19:00",
+		"Happy Hour",
+		"Momento de integração e networking após as visitas técnicas.",
 	],
 ];
 
@@ -82,6 +73,21 @@ const quickLinks = [
 	{ href: "/locais", icon: MapPin, label: "Locais" },
 	{ href: "#inscricao", icon: Ticket, label: "Inscrição" },
 	{ href: "/fotos", icon: Camera, label: "Fotos" },
+];
+
+const sponsorLogos = [
+	{
+		id: "slaviero-wide",
+		name: "Slaviero Hotel Ponta Grossa",
+		src: "/sponsors/sepg-wide.webp",
+		variant: "wide",
+	},
+	{
+		id: "kaiser-tech",
+		name: "Kaiser Tech",
+		src: "/kaiserPreto.png",
+		variant: "compact",
+	},
 ];
 
 function getCountdownItems() {
@@ -127,12 +133,12 @@ function Home() {
 						".event-countdown__grid",
 						".event-countdown__item",
 						".event-quicklink",
+						".event-sponsors",
 						".event-section__heading",
 						".visit-card",
 						".event-timeline li",
 						".schedule-layout__media",
 						".official-hotel",
-						".hotel-mini",
 						".event-final-cta__panel",
 					],
 					{ clearProps: "all" },
@@ -187,6 +193,12 @@ function Home() {
 				duration: 0.68,
 			});
 
+			revealGroup(".event-sponsors", ".event-sponsors__inner", {
+				y: 28,
+				scale: 0.98,
+				duration: 0.72,
+			});
+
 			revealGroup("#visitas", "#visitas .event-section__heading", {
 				y: 28,
 			});
@@ -221,11 +233,6 @@ function Home() {
 				y: 38,
 				scale: 0.97,
 				duration: 0.82,
-			});
-
-			revealGroup("#hospedagem", ".hotel-mini", {
-				x: 30,
-				duration: 0.58,
 			});
 
 			gsap.from(".event-final-cta__panel", {
@@ -323,6 +330,35 @@ function Home() {
 					</div>
 				</section>
 
+				<section className="event-sponsors" aria-label="Patrocinadores">
+					<div className="event-container event-sponsors__inner">
+						<div className="event-sponsors__heading">
+							<span>Patrocinadores</span>
+							<strong>Marcas que apoiam esta experiência</strong>
+						</div>
+						<div className="event-sponsors__marquee">
+							<div className="event-sponsors__track">
+								{[0, 1, 2, 3].map((groupIndex) => (
+									<div
+										className="event-sponsors__group"
+										aria-hidden={groupIndex > 0 ? "true" : undefined}
+										key={`sponsor-group-${groupIndex}`}
+									>
+										{sponsorLogos.map((sponsor) => (
+											<div
+												className={`event-sponsor-logo event-sponsor-logo--${sponsor.variant}`}
+												key={`${sponsor.id}-${groupIndex}`}
+											>
+												<img src={sponsor.src} alt={sponsor.name} loading="lazy" />
+											</div>
+										))}
+									</div>
+								))}
+							</div>
+						</div>
+					</div>
+				</section>
+
 				<section className="event-section" id="visitas">
 					<div className="event-container">
 						<div className="event-section__heading">
@@ -341,16 +377,16 @@ function Home() {
 									key={visit.title}
 									data-home-reveal
 								>
-									<div className="image-placeholder visit-card__image">
+									<div
+										className={`visit-card__image visit-card__image--${visit.imageTone}`}
+									>
+										<img src={visit.image} alt={visit.title} loading="lazy" />
 										<span>{visit.category}</span>
+										<Building2 size={40} />
 									</div>
 									<div className="visit-card__body">
-										<span className="visit-card__time">
-											<Clock3 size={13} /> {visit.time}
-										</span>
 										<h3>{visit.title}</h3>
-										<p>{visit.description}</p>
-										<a href="#visitas">Detalhes da visita</a>
+										<a href="/visitas-tecnicas">Ver detalhes</a>
 									</div>
 								</article>
 							))}
@@ -385,9 +421,13 @@ function Home() {
 							</a>
 						</div>
 						<div className="schedule-layout__media" data-home-reveal>
-							<div className="image-placeholder image-placeholder--tall">
-								<Sparkles size={38} />
-								<span>Imagem da visita técnica</span>
+							<div className="schedule-media-card">
+								<img
+									src="/visits/inbix.webp"
+									alt="Ambiente da Inbix"
+									loading="lazy"
+								/>
+								<span>Inbix</span>
 							</div>
 						</div>
 					</div>
@@ -395,15 +435,20 @@ function Home() {
 
 				<section className="event-section" id="hospedagem">
 					<div className="event-container">
-						<div className="event-section__heading event-section__heading--stacked">
-							<h2>Hospedagem em Ponta Grossa</h2>
-							<p>Selecionamos as melhores opções para sua estadia.</p>
+						<div className="event-section__heading">
+							<div>
+								<h2>Hospedagem em Ponta Grossa</h2>
+								<p>Selecionamos uma opção oficial para sua estadia.</p>
+							</div>
+							<a href="/hospedagem">
+								Ver todos <ArrowRight size={14} />
+							</a>
 						</div>
 						<div className="lodging-layout">
 							<article className="official-hotel">
 								<div className="official-hotel__image">
 									<img
-										src="/slaviero-ponta-grossa.webp"
+										src="/sponsors/slaviero-ponta-grossa.webp"
 										alt="Fachada do Slaviero Ponta Grossa"
 										loading="lazy"
 									/>
@@ -419,15 +464,19 @@ function Home() {
 											Ponta Grossa - PR
 										</li>
 										<li>
-											<CheckCircle2 size={14} /> Café da manhã incluso
+											<CheckCircle2 size={14} /> Local oficial de realização da
+											AGO no sábado
 										</li>
 										<li>
-											<CheckCircle2 size={14} /> Estacionamento gratuito e Wi-Fi
-											gratuito
+											<CheckCircle2 size={14} /> Café da manhã, estacionamento e
+											Wi-Fi inclusos
 										</li>
 										<li>
-											<CheckCircle2 size={14} /> Hotel oficial para a estadia dos
-											participantes
+											<CheckCircle2 size={14} /> Cupom de desconto: EPJE15
+										</li>
+										<li>
+											<CheckCircle2 size={14} /> Condições especiais para grupos a
+											partir de 15 quartos. Falar com Cassiano: (42) 99124-9720
 										</li>
 									</ul>
 									<a
@@ -440,27 +489,6 @@ function Home() {
 									</a>
 								</div>
 							</article>
-							<aside className="hotel-list" aria-label="Outras recomendações">
-								<span>Outras recomendações</span>
-								{[
-									"Hotel Business Class",
-									"Executive Stay PG",
-									"Plaza Suites",
-								].map((hotel, index) => (
-									<a className="hotel-mini" href="#hospedagem" key={hotel}>
-										<div className="image-placeholder hotel-mini__image">
-											{index + 1}
-										</div>
-										<div>
-											<strong>{hotel}</strong>
-											<small>
-												R$ {index === 0 ? "240" : index === 1 ? "310" : "330"}
-												/noite
-											</small>
-										</div>
-									</a>
-								))}
-							</aside>
 						</div>
 					</div>
 				</section>
@@ -470,8 +498,8 @@ function Home() {
 						<div className="event-final-cta__panel">
 							<h2>Não perca a chance de transformar sua visão técnica</h2>
 							<p>
-								As vagas são limitadas para garantir a qualidade de todas as
-								visitas e interações. Garanta seu lugar agora mesmo!
+								Participe de uma experiência com visitas técnicas, programação
+								estratégica e conexões com empresas confirmadas em Ponta Grossa.
 							</p>
 							<a
 								className="event-button event-button--highlight event-final-cta__button"
