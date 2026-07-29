@@ -21,9 +21,10 @@ const placeGroups = [
 		icon: Building2,
 		items: [
 			{
-				name: "Campus Central - UEPG",
-				address: "Praça Santos Andrade, 1 - Centro, Ponta Grossa - PR",
+				name: "ACIPG",
+				address: "Avenida Visconde de Taunay, 1855 - Ronda, Ponta Grossa - PR",
 				featured: true,
+				image: "/acipg-hero.webp",
 			},
 		],
 	},
@@ -145,7 +146,11 @@ function LocationsPage() {
 												key={place.name}
 											>
 												{place.featured ? (
-													<div className="location-card__image" />
+													<div className="location-card__image">
+														{"image" in place ? (
+															<img src={place.image} alt={place.name} loading="lazy" />
+														) : null}
+													</div>
 												) : null}
 												<h3>{place.name}</h3>
 												<p>{place.address}</p>

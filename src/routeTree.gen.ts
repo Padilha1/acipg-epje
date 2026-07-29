@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VisitasTecnicasRouteImport } from './routes/visitas-tecnicas'
 import { Route as ProgramacaoRouteImport } from './routes/programacao'
+import { Route as PatrocinadoresRouteImport } from './routes/patrocinadores'
 import { Route as LocaisRouteImport } from './routes/locais'
 import { Route as HospedagemRouteImport } from './routes/hospedagem'
 import { Route as FotosRouteImport } from './routes/fotos'
@@ -24,6 +25,11 @@ const VisitasTecnicasRoute = VisitasTecnicasRouteImport.update({
 const ProgramacaoRoute = ProgramacaoRouteImport.update({
   id: '/programacao',
   path: '/programacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PatrocinadoresRoute = PatrocinadoresRouteImport.update({
+  id: '/patrocinadores',
+  path: '/patrocinadores',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LocaisRoute = LocaisRouteImport.update({
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/fotos': typeof FotosRoute
   '/hospedagem': typeof HospedagemRoute
   '/locais': typeof LocaisRoute
+  '/patrocinadores': typeof PatrocinadoresRoute
   '/programacao': typeof ProgramacaoRoute
   '/visitas-tecnicas': typeof VisitasTecnicasRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/fotos': typeof FotosRoute
   '/hospedagem': typeof HospedagemRoute
   '/locais': typeof LocaisRoute
+  '/patrocinadores': typeof PatrocinadoresRoute
   '/programacao': typeof ProgramacaoRoute
   '/visitas-tecnicas': typeof VisitasTecnicasRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/fotos': typeof FotosRoute
   '/hospedagem': typeof HospedagemRoute
   '/locais': typeof LocaisRoute
+  '/patrocinadores': typeof PatrocinadoresRoute
   '/programacao': typeof ProgramacaoRoute
   '/visitas-tecnicas': typeof VisitasTecnicasRoute
 }
@@ -79,6 +88,7 @@ export interface FileRouteTypes {
     | '/fotos'
     | '/hospedagem'
     | '/locais'
+    | '/patrocinadores'
     | '/programacao'
     | '/visitas-tecnicas'
   fileRoutesByTo: FileRoutesByTo
@@ -87,6 +97,7 @@ export interface FileRouteTypes {
     | '/fotos'
     | '/hospedagem'
     | '/locais'
+    | '/patrocinadores'
     | '/programacao'
     | '/visitas-tecnicas'
   id:
@@ -95,6 +106,7 @@ export interface FileRouteTypes {
     | '/fotos'
     | '/hospedagem'
     | '/locais'
+    | '/patrocinadores'
     | '/programacao'
     | '/visitas-tecnicas'
   fileRoutesById: FileRoutesById
@@ -104,6 +116,7 @@ export interface RootRouteChildren {
   FotosRoute: typeof FotosRoute
   HospedagemRoute: typeof HospedagemRoute
   LocaisRoute: typeof LocaisRoute
+  PatrocinadoresRoute: typeof PatrocinadoresRoute
   ProgramacaoRoute: typeof ProgramacaoRoute
   VisitasTecnicasRoute: typeof VisitasTecnicasRoute
 }
@@ -122,6 +135,13 @@ declare module '@tanstack/react-router' {
       path: '/programacao'
       fullPath: '/programacao'
       preLoaderRoute: typeof ProgramacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/patrocinadores': {
+      id: '/patrocinadores'
+      path: '/patrocinadores'
+      fullPath: '/patrocinadores'
+      preLoaderRoute: typeof PatrocinadoresRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/locais': {
@@ -160,6 +180,7 @@ const rootRouteChildren: RootRouteChildren = {
   FotosRoute: FotosRoute,
   HospedagemRoute: HospedagemRoute,
   LocaisRoute: LocaisRoute,
+  PatrocinadoresRoute: PatrocinadoresRoute,
   ProgramacaoRoute: ProgramacaoRoute,
   VisitasTecnicasRoute: VisitasTecnicasRoute,
 }

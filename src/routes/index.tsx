@@ -287,9 +287,12 @@ function Home() {
 							</div>
 						</div>
 						<div className="event-hero__media" data-home-reveal>
-							<div className="image-placeholder image-placeholder--hero">
-								<Building2 size={42} />
-								<span>Imagem principal do evento</span>
+							<div className="event-hero-image">
+								<img
+									src="/acipg-hero.webp"
+									alt="Sede da ACIPG em Ponta Grossa"
+									fetchPriority="high"
+								/>
 							</div>
 							<div className="event-attendees">
 								<Users size={18} />

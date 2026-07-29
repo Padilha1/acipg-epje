@@ -9,6 +9,7 @@ type HeaderProps = {
 		| "visitas"
 		| "programacao"
 		| "hospedagem"
+		| "patrocinadores"
 		| "locais"
 		| "fotos";
 	className?: string;
@@ -19,6 +20,7 @@ const navItems: HeaderNavItem[] = [
 	{ id: "visitas", label: "Visitas Técnicas", to: "/visitas-tecnicas" },
 	{ id: "programacao", label: "Programação", to: "/programacao" },
 	{ id: "hospedagem", label: "Hospedagem", to: "/hospedagem" },
+	{ id: "patrocinadores", label: "Patrocinadores", to: "/patrocinadores" },
 	{ id: "locais", label: "Locais", to: "/locais" },
 	{ id: "fotos", label: "Fotos", to: "/fotos" },
 ];
