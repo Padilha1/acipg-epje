@@ -2610,7 +2610,7 @@ body:has(.event-home) {
   }
 
   .event-footer__grid {
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: minmax(16rem, 1.4fr) repeat(3, minmax(8rem, 0.8fr));
   }
 
   .event-footer__bottom {

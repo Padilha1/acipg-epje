@@ -38,6 +38,10 @@ export function Footer() {
 					<a href="/fotos">Fotos</a>
 					<a href="/#inscricao">Inscrever-se</a>
 				</nav>
+				<nav aria-label="Suporte">
+					<span>Suporte</span>
+					<a href="mailto:acipgjovem@gmail.com">acipgjovem@gmail.com</a>
+				</nav>
 			</div>
 			<div className="event-container event-footer__bottom">
 				<span>
