@@ -11,6 +11,7 @@ type SponsorLogo = {
 	src: string;
 	size?: "hero" | "large";
 	emphasis?: "supporter";
+	fit?: "fill";
 	tone?: "dark";
 };
 
@@ -78,6 +79,13 @@ const sponsorSections: SponsorSection[] = [
 				size: "large",
 				tone: "dark",
 			},
+			{
+				name: "Brigatta",
+				src: "/sponsors/logos/brigatta.webp",
+				size: "large",
+				fit: "fill",
+				tone: "dark",
+			},
 		],
 	},
 	{
@@ -128,12 +136,6 @@ const sponsorSections: SponsorSection[] = [
 				name: "BioFragane",
 				src: "/sponsors/logos/biofragane.webp",
 				emphasis: "supporter",
-			},
-			{
-				name: "Brigatta",
-				src: "/sponsors/logos/brigatta.webp",
-				emphasis: "supporter",
-				tone: "dark",
 			},
 			{
 				name: "Cargill",
@@ -208,6 +210,9 @@ function SponsorsPage() {
 											logo.size ? `sponsors-logo-card--${logo.size}` : undefined,
 											logo.emphasis === "supporter"
 												? "sponsors-logo-card--supporter"
+												: undefined,
+											logo.fit === "fill"
+												? "sponsors-logo-card--fill"
 												: undefined,
 											logo.tone === "dark"
 												? "sponsors-logo-card--dark"

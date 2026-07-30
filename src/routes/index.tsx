@@ -48,7 +48,8 @@ const quickLinks = [
 	{ href: "/visitas-tecnicas", icon: RouteIcon, label: "Visitas" },
 	{ href: "/programacao", icon: CalendarDays, label: "Programação" },
 	{ href: "/hospedagem", icon: Bed, label: "Hospedagem" },
-	{ href: "/locais", icon: MapPin, label: "Locais" },
+	// Locais fica oculto até a confirmação final dos pontos do evento.
+	// { href: "/locais", icon: MapPin, label: "Locais" },
 	{ href: "#inscricao", icon: Ticket, label: "Inscrição" },
 	{ href: "/patrocinadores", icon: Handshake, label: "Patrocinadores" },
 ];

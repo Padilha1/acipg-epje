@@ -21,7 +21,8 @@ const navItems: HeaderNavItem[] = [
 	{ id: "programacao", label: "Programação", to: "/programacao" },
 	{ id: "hospedagem", label: "Hospedagem", to: "/hospedagem" },
 	{ id: "patrocinadores", label: "Patrocinadores", to: "/patrocinadores" },
-	{ id: "locais", label: "Locais", to: "/locais" },
+	// Locais fica oculto até a confirmação final dos pontos do evento.
+	// { id: "locais", label: "Locais", to: "/locais" },
 	{ id: "fotos", label: "Fotos", to: "/fotos" },
 ];
 

@@ -207,7 +207,7 @@ const visits = [
 		category: "Mentorias",
 		title: "PLSS + Rivus",
 		location: "Ponta Grossa - PR",
-		image: "/sponsors/logos/rivus.webp",
+		image: "/sponsors/logos/pelissari-rivus.webp",
 		imageFit: "logo-muted",
 		imageTone: "mentorias",
 		requirementTitle: "Orientações preliminares",

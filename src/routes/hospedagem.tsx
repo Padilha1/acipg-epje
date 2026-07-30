@@ -3,7 +3,6 @@ import {
 	CheckCircle2,
 	ExternalLink,
 	MapPin,
-	Navigation,
 	ShieldCheck,
 	Star,
 } from "lucide-react";
@@ -21,20 +20,20 @@ const recommendedHotels = [
 	{
 		name: "Planalto Select Hotel",
 		address: "R. Sete de Setembro, 652 - Centro",
-		price: "R$ 280",
-		tags: ["2,4 km do evento", "Estacionamento grátis"],
+		price: "R$ 349",
+		tags: ["2,4 km da ACIPG", "Estacionamento grátis"],
 	},
 	{
 		name: "Ibis Ponta Grossa",
 		address: "R. Dr. Paula Xavier, 21 - Centro",
-		price: "R$ 195",
-		tags: ["1,8 km do evento", "Econômico"],
+		price: "R$ 330",
+		tags: ["1,8 km da ACIPG"],
 	},
 	{
-		name: "Hotel Vila Velha",
+		name: "Premium Vila Velha Ponta Grossa",
 		address: "R. Balduíno Taques, 123 - Centro",
-		price: "R$ 225",
-		tags: ["3,1 km do evento", "Tradicional"],
+		price: "R$ 385",
+		tags: ["3,1 km da ACIPG", "Tradicional"],
 	},
 ];
 
@@ -170,14 +169,6 @@ function LodgingPage() {
 							</div>
 							<div className="lodging-info-card">
 								<h2>Orientações importantes</h2>
-								<div>
-									<Navigation size={18} />
-									<strong>Transporte coletivo</strong>
-									<p>
-										Haverá vans saindo do hotel oficial a cada 30 minutos em
-										direção ao Campus UEPG.
-									</p>
-								</div>
 								<div>
 									<ShieldCheck size={18} />
 									<strong>Check-in facilitado</strong>

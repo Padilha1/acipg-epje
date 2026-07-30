@@ -14,7 +14,7 @@ export function Footer() {
 					/>
 					<p>
 						Um evento dedicado ao aprimoramento profissional e descoberta do
-						potencial industrial dos Campos Gerais.
+						potencial empresarial dos Campos Gerais.
 					</p>
 					<div className="event-socials">
 						<a href="/fotos" aria-label="Instagram">
@@ -27,17 +27,16 @@ export function Footer() {
 				</div>
 				<nav aria-label="Acesso rápido">
 					<span>Acesso rápido</span>
-					<a href="/">Início do evento</a>
-					<a href="/programacao">Cronograma</a>
-					<a href="/hospedagem">Hospedagens</a>
-					<a href="/locais">Locais</a>
+					<a href="/">Início</a>
+					<a href="/visitas-tecnicas">Visitas Técnicas</a>
+					<a href="/programacao">Programação</a>
 				</nav>
-				<nav aria-label="Suporte">
-					<span>Suporte</span>
-					<a href="/locais">FAQ</a>
-					<a href="/locais">Privacidade</a>
-					<a href="/locais">Termos de uso</a>
-					<a href="/locais">Contato</a>
+				<nav aria-label="Evento">
+					<span>Evento</span>
+					<a href="/hospedagem">Hospedagem</a>
+					<a href="/patrocinadores">Patrocinadores</a>
+					<a href="/fotos">Fotos</a>
+					<a href="/#inscricao">Inscrever-se</a>
 				</nav>
 			</div>
 			<div className="event-container event-footer__bottom">

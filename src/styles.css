@@ -2311,17 +2311,35 @@ body:has(.event-home) {
 }
 
 .event-final-cta__panel {
+  position: relative;
+  overflow: hidden;
   display: grid;
   min-height: 19rem;
   place-items: center;
   align-content: center;
   gap: 1rem;
   padding: 2rem 1.2rem;
-  border: 2px solid var(--neutral-900);
+  border: 0;
   border-radius: var(--radius-lg);
-  background: var(--neutral-800);
+  background: var(--brand-700);
   color: var(--neutral-0);
   text-align: center;
+}
+
+.event-final-cta__panel::after {
+  position: absolute;
+  right: -5rem;
+  bottom: -7rem;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  background: rgb(123 21 61 / 24%);
+  content: "";
+}
+
+.event-final-cta__panel > * {
+  position: relative;
+  z-index: 1;
 }
 
 .event-final-cta h2 {
@@ -2336,7 +2354,7 @@ body:has(.event-home) {
 .event-final-cta p {
   max-width: 33rem;
   margin: 0;
-  color: var(--neutral-100);
+  color: var(--brand-50);
   font-size: 0.8rem;
 }
 
@@ -3541,6 +3559,16 @@ body:has(.sponsors-page) {
   max-height: 5.2rem;
 }
 
+.sponsors-logo-card--fill {
+  min-height: 9.5rem;
+  padding: 0.65rem;
+}
+
+.sponsors-logo-card--fill img {
+  max-width: min(100%, 18rem);
+  max-height: 8rem;
+}
+
 .sponsors-logo-card--hero {
   min-height: 10rem;
 }
@@ -3808,6 +3836,7 @@ body:has(.sponsors-page) {
   margin: 0;
   color: var(--neutral-900);
   font-size: 0.92rem;
+  font-weight: 900;
 }
 
 .lodging-hotel-card p {
@@ -4766,10 +4795,6 @@ body:has(.sponsors-page) {
     grid-template-columns: minmax(0, 1fr) minmax(10rem, auto);
     align-items: start;
     padding: 1.45rem 1.6rem;
-  }
-
-  .schedule-event--break .schedule-event__content {
-    grid-template-columns: 1fr;
   }
 
   .schedule-event__host {
