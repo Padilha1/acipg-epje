@@ -47,10 +47,12 @@ export function Footer() {
 				<span>
 					Desenvolvido com ❤️ por{" "}
 					<a
+						className="event-footer__credit-link"
 						href="https://kaisertec.com.br?utm_source=epje&utm_medium=footer&utm_campaign=epje_pg"
 						target="_blank"
 						rel="noopener"
 					>
+						<img src="/kaiserPreto.png" alt="" aria-hidden="true" />
 						Kaiser Tech
 					</a>
 				</span>

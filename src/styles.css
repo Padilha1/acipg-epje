@@ -2441,6 +2441,21 @@ body:has(.event-home) {
   text-underline-offset: 0.18rem;
 }
 
+.event-footer__credit-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  vertical-align: -0.12em;
+}
+
+.event-footer__credit-link img {
+  width: 0.9rem;
+  height: 0.9rem;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transform: translateY(0.03rem);
+}
+
 .event-footer__bottom a:hover,
 .event-footer__bottom a:focus-visible {
   color: var(--highlight-500);
