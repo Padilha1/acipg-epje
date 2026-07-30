@@ -221,8 +221,7 @@ const visits = [
 		category: "Serviços e Outros",
 		title: "Palmeira Ambiental",
 		location: "Rodovia BR-376, Av. B, 1657 - Colônia Dona Luíza",
-		image: "/sponsors/logos/palmeira-ambiental.webp",
-		imageFit: "logo-muted",
+		image: "/visits/palmeira-ambiental.webp",
 		imageTone: "servicos",
 		requirementTitle: "Orientações preliminares",
 		requirements: [
