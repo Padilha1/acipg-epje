@@ -17,10 +17,20 @@ export function Footer() {
 						potencial empresarial dos Campos Gerais.
 					</p>
 					<div className="event-socials">
-						<a href="/fotos" aria-label="Instagram">
+						<a
+							href="https://www.instagram.com/acipgjovem/"
+							aria-label="Instagram"
+							target="_blank"
+							rel="noopener"
+						>
 							<Instagram size={15} />
 						</a>
-						<a href="/fotos" aria-label="Facebook">
+						<a
+							href="https://www.facebook.com/ACIPGJovem"
+							aria-label="Facebook"
+							target="_blank"
+							rel="noopener"
+						>
 							<Facebook size={15} />
 						</a>
 					</div>
