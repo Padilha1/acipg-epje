@@ -1308,7 +1308,7 @@ body:has(.event-home) {
   padding-bottom: 0;
 }
 
-.event-home a {
+.event-home main a {
   color: inherit;
 }
 
@@ -1361,10 +1361,12 @@ body:has(.event-home) {
 }
 
 .event-header {
-  position: sticky;
+  position: fixed;
   z-index: 60;
   top: 0;
+  left: 0;
   display: grid;
+  width: 100%;
   min-height: 4.25rem;
   grid-template-columns: 1fr auto auto;
   align-items: center;
@@ -1435,11 +1437,16 @@ body:has(.event-home) {
 
 .event-header__cta {
   padding: 0 0.95rem;
-  background: var(--highlight-500);
-  color: var(--neutral-900);
+  background: var(--brand-700);
+  color: var(--neutral-0);
   font-size: 0.68rem;
   font-weight: 850;
   text-decoration: none;
+}
+
+.event-header__cta:hover,
+.event-header__cta:focus-visible {
+  background: var(--brand-800);
 }
 
 .event-menu {
@@ -1447,6 +1454,16 @@ body:has(.event-home) {
   border: 1px solid var(--brand-100);
   background: var(--neutral-0);
   color: var(--brand-800);
+}
+
+.event-home,
+.technical-visits-page,
+.schedule-page,
+.lodging-page,
+.locations-page,
+.photos-page,
+.sponsors-page {
+  padding-top: 4.25rem;
 }
 
 .mobile-menu-layer {
