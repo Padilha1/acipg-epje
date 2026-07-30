@@ -5,10 +5,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
 	ArrowRight,
 	Bed,
-	Building2,
 	CalendarDays,
-	Camera,
 	CheckCircle2,
+	Handshake,
 	Hotel,
 	MapPin,
 	Route as RouteIcon,
@@ -27,66 +26,100 @@ const eventStartAt = new Date("2026-10-16T00:00:00-03:00").getTime();
 const slavieroBookingUrl =
 	"https://book.omnibees.com/chain/1409/hotel/15710?c=1409&currencyId=16&lang=pt-BR&q=15710";
 
-const visits = [
-	{
-		category: "Agro",
-		title: "Cargill",
-		image: "/visits/cargill.webp",
-		imageTone: "agro",
-	},
-	{
-		category: "Indústria",
-		title: "Heineken",
-		image: "/visits/heineken.webp",
-		imageTone: "industria",
-	},
-	{
-		category: "Tecnologia e Inovação",
-		title: "Estação Hub",
-		image: "/visits/estacao-hub.webp",
-		imageTone: "tecnologia",
-	},
-];
-
 const schedule = [
 	[
-		"10:00 - 13:30",
-		"Credenciamento",
-		"Recepção dos participantes no hotel oficial e retirada dos materiais.",
+		"12:00",
+		"Abertura e credenciamento",
+		"Recepção dos participantes, abertura oficial e retirada dos materiais.",
 	],
 	[
-		"14:00 - 18:00",
-		"Visitas Técnicas",
-		"Saída para as empresas confirmadas e atividades técnicas no período da tarde.",
+		"14:00",
+		"Saída para visitas técnicas",
+		"Organização dos grupos e saída para as atividades técnicas.",
 	],
 	[
-		"A partir das 19:00",
+		"19:00",
 		"Happy Hour",
 		"Momento de integração e networking após as visitas técnicas.",
 	],
 ];
 
 const quickLinks = [
-	{ href: "#visitas", icon: RouteIcon, label: "Visitas" },
+	{ href: "/visitas-tecnicas", icon: RouteIcon, label: "Visitas" },
 	{ href: "/programacao", icon: CalendarDays, label: "Programação" },
 	{ href: "/hospedagem", icon: Bed, label: "Hospedagem" },
 	{ href: "/locais", icon: MapPin, label: "Locais" },
 	{ href: "#inscricao", icon: Ticket, label: "Inscrição" },
-	{ href: "/fotos", icon: Camera, label: "Fotos" },
+	{ href: "/patrocinadores", icon: Handshake, label: "Patrocinadores" },
 ];
 
 const sponsorLogos = [
 	{
-		id: "slaviero-wide",
-		name: "Slaviero Hotel Ponta Grossa",
-		src: "/sponsors/sepg-wide.webp",
+		id: "inbix",
+		name: "Inbix",
+		src: "/sponsors/logos/inbix.webp",
 		variant: "wide",
+	},
+	{
+		id: "cia-ticket",
+		name: "Cia Ticket",
+		src: "/sponsors/logos/cia-ticket.webp",
+		variant: "wide",
+	},
+	{
+		id: "slaviero",
+		name: "Slaviero",
+		src: "/sponsors/logos/slaviero.webp",
+		variant: "wide",
+	},
+	{
+		id: "smart",
+		name: "Smart",
+		src: "/sponsors/logos/smart.webp",
+		variant: "wide",
+	},
+	{
+		id: "dbug",
+		name: "DBUG",
+		src: "/sponsors/logos/dbug.webp",
+		variant: "tall",
+	},
+	{
+		id: "ruivo",
+		name: "Ruivo Fotografia",
+		src: "/sponsors/logos/ruivo.webp",
+		variant: "square",
+	},
+	{
+		id: "box-video",
+		name: "Box Vídeo",
+		src: "/sponsors/logos/box-video.webp",
+		variant: "box",
+	},
+	{
+		id: "mich",
+		name: "Mich",
+		src: "/sponsors/logos/mich.webp",
+		variant: "wide",
+		tone: "dark",
+	},
+	{
+		id: "rogerio-junior",
+		name: "Rogério Junior",
+		src: "/sponsors/logos/rogerio-junior.webp",
+		variant: "tall",
 	},
 	{
 		id: "kaiser-tech",
 		name: "Kaiser Tech",
-		src: "/kaiserPreto.png",
-		variant: "compact",
+		src: "/sponsors/logos/kaiser-tech.webp",
+		variant: "square",
+	},
+	{
+		id: "win-target",
+		name: "Win Target",
+		src: "/sponsors/logos/win-target.webp",
+		variant: "tall",
 	},
 ];
 
@@ -135,7 +168,6 @@ function Home() {
 						".event-quicklink",
 						".event-sponsors",
 						".event-section__heading",
-						".visit-card",
 						".event-timeline li",
 						".schedule-layout__media",
 						".official-hotel",
@@ -196,17 +228,6 @@ function Home() {
 			revealGroup(".event-sponsors", ".event-sponsors__inner", {
 				y: 28,
 				scale: 0.98,
-				duration: 0.72,
-			});
-
-			revealGroup("#visitas", "#visitas .event-section__heading", {
-				y: 28,
-			});
-
-			revealGroup("#visitas", ".visit-card", {
-				y: 42,
-				rotate: -1.5,
-				scale: 0.96,
 				duration: 0.72,
 			});
 
@@ -349,7 +370,15 @@ function Home() {
 									>
 										{sponsorLogos.map((sponsor) => (
 											<div
-												className={`event-sponsor-logo event-sponsor-logo--${sponsor.variant}`}
+												className={[
+													"event-sponsor-logo",
+													`event-sponsor-logo--${sponsor.variant}`,
+													sponsor.tone === "dark"
+														? "event-sponsor-logo--dark"
+														: undefined,
+												]
+													.filter(Boolean)
+													.join(" ")}
 												key={`${sponsor.id}-${groupIndex}`}
 											>
 												<img src={sponsor.src} alt={sponsor.name} loading="lazy" />
@@ -362,40 +391,7 @@ function Home() {
 					</div>
 				</section>
 
-				<section className="event-section" id="visitas">
-					<div className="event-container">
-						<div className="event-section__heading">
-							<div>
-								<h2>Visitas Técnicas em Destaque</h2>
-								<p>Conheça alguns dos roteiros confirmados para esta edição.</p>
-							</div>
-							<a href="/visitas-tecnicas">
-								Ver todas <ArrowRight size={14} />
-							</a>
-						</div>
-						<div className="visit-grid">
-							{visits.map((visit) => (
-								<article
-									className="visit-card"
-									key={visit.title}
-									data-home-reveal
-								>
-									<div
-										className={`visit-card__image visit-card__image--${visit.imageTone}`}
-									>
-										<img src={visit.image} alt={visit.title} loading="lazy" />
-										<span>{visit.category}</span>
-										<Building2 size={40} />
-									</div>
-									<div className="visit-card__body">
-										<h3>{visit.title}</h3>
-										<a href="/visitas-tecnicas">Ver detalhes</a>
-									</div>
-								</article>
-							))}
-						</div>
-					</div>
-				</section>
+				{/* Seção de visitas técnicas em destaque temporariamente oculta. */}
 
 				<section className="event-section event-section--soft" id="programacao">
 					<div className="event-container schedule-layout">
@@ -426,11 +422,11 @@ function Home() {
 						<div className="schedule-layout__media" data-home-reveal>
 							<div className="schedule-media-card">
 								<img
-									src="/visits/inbix.webp"
-									alt="Ambiente da Inbix"
+									src="/locations/vila-velha-taca.webp"
+									alt="Formação da Taça no Parque Vila Velha"
 									loading="lazy"
 								/>
-								<span>Inbix</span>
+								<span>Parque Vila Velha</span>
 							</div>
 						</div>
 					</div>

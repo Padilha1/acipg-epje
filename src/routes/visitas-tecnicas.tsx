@@ -153,6 +153,8 @@ const visits = [
 		category: "Indústria",
 		title: "Biofragane",
 		location: "Rua Guilherme Wiecheteck, 1019",
+		image: "/sponsors/logos/biofragane.webp",
+		imageFit: "logo-soft",
 		imageTone: "industria",
 		requirementTitle: "Orientações preliminares",
 		requirements: [
@@ -191,7 +193,8 @@ const visits = [
 		category: "Mentorias",
 		title: "Mentoria - Brigatta",
 		location: "Atividade de mentoria - local a confirmar",
-		image: "/visits/brigatta.webp",
+		image: "/sponsors/logos/brigatta.webp",
+		imageFit: "logo-fill",
 		imageTone: "mentorias",
 		requirementTitle: "Orientações preliminares",
 		requirements: [
@@ -204,7 +207,8 @@ const visits = [
 		category: "Mentorias",
 		title: "PLSS + Rivus",
 		location: "Ponta Grossa - PR",
-		image: "/visits/plss-rivus.webp",
+		image: "/sponsors/logos/rivus.webp",
+		imageFit: "logo-muted",
 		imageTone: "mentorias",
 		requirementTitle: "Orientações preliminares",
 		requirements: [
@@ -217,7 +221,8 @@ const visits = [
 		category: "Serviços e Outros",
 		title: "Palmeira Ambiental",
 		location: "Rodovia BR-376, Av. B, 1657 - Colônia Dona Luíza",
-		image: "/visits/palmeira-ambiental.webp",
+		image: "/sponsors/logos/palmeira-ambiental.webp",
+		imageFit: "logo-muted",
 		imageTone: "servicos",
 		requirementTitle: "Orientações preliminares",
 		requirements: [
@@ -241,8 +246,8 @@ const visits = [
 	},
 	{
 		category: "Serviços e Outros",
-		title: "Smart",
-		location: "PR-151 - Ponta Grossa",
+		title: "Espaço Smart",
+		location: "Av. Visc. de Mauá, 3460",
 		image: "/visits/smart.webp",
 		imageTone: "servicos",
 		requirementTitle: "Orientações preliminares",
@@ -415,7 +420,15 @@ function TechnicalVisitCard({ visit }: { visit: (typeof visits)[number] }) {
 	return (
 		<article className="technical-visit-card">
 			<div
-				className={`technical-visit-card__image technical-visit-card__image--${visit.imageTone}`}
+				className={[
+					"technical-visit-card__image",
+					`technical-visit-card__image--${visit.imageTone}`,
+					"imageFit" in visit
+						? `technical-visit-card__image--${visit.imageFit}`
+						: undefined,
+				]
+					.filter(Boolean)
+					.join(" ")}
 			>
 				{"image" in visit ? (
 					<img src={visit.image} alt={visit.title} loading="lazy" />

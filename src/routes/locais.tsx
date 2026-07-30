@@ -4,6 +4,7 @@ import {
 	Bus,
 	Copy,
 	Factory,
+	type LucideIcon,
 	MapPin,
 	Navigation,
 	Utensils,
@@ -15,7 +16,20 @@ export const Route = createFileRoute("/locais")({
 	component: LocationsPage,
 });
 
-const placeGroups = [
+type Place = {
+	name: string;
+	address: string;
+	featured?: boolean;
+	image?: string;
+};
+
+type PlaceGroup = {
+	title: string;
+	icon: LucideIcon;
+	items: Place[];
+};
+
+const placeGroups: PlaceGroup[] = [
 	{
 		title: "Pontos de encontro",
 		icon: Building2,

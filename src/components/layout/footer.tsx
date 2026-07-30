@@ -47,9 +47,9 @@ export function Footer() {
 				<span>
 					Desenvolvido com ❤️ por{" "}
 					<a
-						href="https://padilha-eight.vercel.app/"
+						href="https://kaisertec.com.br?utm_source=epje&utm_medium=footer&utm_campaign=epje_pg"
 						target="_blank"
-						rel="noreferrer"
+						rel="noopener"
 					>
 						Kaiser Tech
 					</a>

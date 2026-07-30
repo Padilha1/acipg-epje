@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
 	BriefcaseBusiness,
 	Clock3,
+	type LucideIcon,
 	MapPin,
 	PartyPopper,
 	Route as RouteIcon,
@@ -15,7 +16,30 @@ export const Route = createFileRoute("/programacao")({
 	component: SchedulePage,
 });
 
-const scheduleDays = [
+type ScheduleEvent = {
+	time: string;
+	track: string;
+	category: string;
+	title: string;
+	location: string;
+	host?: string;
+	role?: string;
+	description?: string;
+	tags?: string[];
+	variant: "standard" | "featured" | "break";
+	icon: LucideIcon;
+};
+
+type ScheduleDay = {
+	id: string;
+	label: string;
+	shortLabel: string;
+	ctaTitle: string;
+	ctaDescription: string;
+	events: ScheduleEvent[];
+};
+
+const scheduleDays: ScheduleDay[] = [
 	{
 		id: "dia-1",
 		label: "Dia 1 - 16/Out",
@@ -25,33 +49,33 @@ const scheduleDays = [
 			"O primeiro dia reúne credenciamento, visitas técnicas no período da tarde e integração no happy hour.",
 		events: [
 			{
-				time: "10:00 - 13:30",
+				time: "12:00",
 				track: "Credenciamento",
-				category: "Logística",
-				title: "Credenciamento",
+				category: "Abertura",
+				title: "Abertura e credenciamento",
 				location: "Hotel oficial",
 				host: "Coordenação Visita",
 				role: "Equipe Organizadora",
 				description:
-					"Recepção dos participantes no hotel oficial e retirada dos materiais.",
+					"Recepção dos participantes, abertura oficial e retirada dos materiais.",
 				variant: "standard",
 				icon: Clock3,
 			},
 			{
-				time: "14:00 - 18:00",
+				time: "14:00",
 				track: "Visitas Técnicas",
 				category: "Rotas Técnicas",
-				title: "Visitas Técnicas",
+				title: "Saída para visitas técnicas",
 				location: "Empresas confirmadas",
 				host: "Coordenação Visita",
 				role: "Equipe Organizadora",
 				description:
-					"Saída para as empresas confirmadas e atividades técnicas no período da tarde.",
+					"Organização dos grupos e saída para as atividades técnicas.",
 				variant: "featured",
 				icon: RouteIcon,
 			},
 			{
-				time: "A partir das 19:00",
+				time: "19:00",
 				track: "Happy Hour",
 				category: "Networking",
 				title: "Happy Hour",
@@ -71,10 +95,10 @@ const scheduleDays = [
 		shortLabel: "Dia 2",
 		ctaTitle: "Confira a programação do Dia 2",
 		ctaDescription:
-			"O segundo dia concentra a reunião oficial, palestra com convidado especial e almoço de encerramento.",
+			"O segundo dia concentra a reunião oficial, almoço e a final do JOJEPs em Vila Velha.",
 		events: [
 			{
-				time: "08:00 - 10:30",
+				time: "08:30",
 				track: "AGO",
 				category: "Reunião Oficial",
 				title: "Reunião Oficial AGO",
@@ -87,26 +111,26 @@ const scheduleDays = [
 				icon: Clock3,
 			},
 			{
-				time: "10:30",
-				track: "Palestra",
-				category: "Convidado Especial",
-				title: "Palestra com convidado especial",
-				location: "Hotel Slaviero (Oficial)",
-				host: "Convidado especial",
-				role: "Palestrante",
-				description:
-					"Conteúdo especial para os participantes após a reunião oficial.",
-				variant: "standard",
-				icon: BriefcaseBusiness,
-			},
-			{
-				time: "12:30",
+				time: "13:00",
 				track: "Intervalo",
 				category: "Networking e comida",
 				title: "Almoço",
 				location: "Restaurante conveniado",
 				variant: "break",
 				icon: Utensils,
+			},
+			{
+				time: "15:00",
+				track: "JOJEPs",
+				category: "Encerramento",
+				title: "Final JOJEPs",
+				location: "Vila Velha",
+				host: "Coordenação Visita",
+				role: "Equipe Organizadora",
+				description:
+					"Atividade final do evento no Parque Vila Velha.",
+				variant: "standard",
+				icon: BriefcaseBusiness,
 			},
 		],
 	},
@@ -182,7 +206,7 @@ function SchedulePage() {
 function ScheduleEventCard({
 	event,
 }: {
-	event: (typeof scheduleDays)[number]["events"][number];
+	event: ScheduleEvent;
 }) {
 	const Icon = event.icon;
 
