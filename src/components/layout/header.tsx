@@ -26,6 +26,8 @@ const navItems: HeaderNavItem[] = [
 	{ id: "fotos", label: "Fotos", to: "/fotos" },
 ];
 
+const signupUrl = "https://app.ciaticket.com.br/e/EPJEPG26";
+
 export function Header({ active, className }: HeaderProps) {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,9 +72,14 @@ export function Header({ active, className }: HeaderProps) {
 					</Link>
 				))}
 			</nav>
-			<Link className="event-header__cta" to="/" hash="inscricao">
+			<a
+				className="event-header__cta"
+				href={signupUrl}
+				target="_blank"
+				rel="noopener"
+			>
 				Inscrever-se
-			</Link>
+			</a>
 			<button
 				className="event-menu"
 				type="button"

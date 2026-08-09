@@ -15,8 +15,9 @@ type MobileMenuProps = {
 	items: HeaderNavItem[];
 	menuId: string;
 	onClose: () => void;
-	signupHash?: string;
 };
+
+const signupUrl = "https://app.ciaticket.com.br/e/EPJEPG26";
 
 export function MobileMenu({
 	active,
@@ -24,7 +25,6 @@ export function MobileMenu({
 	items,
 	menuId,
 	onClose,
-	signupHash = "inscricao",
 }: MobileMenuProps) {
 	useEffect(() => {
 		if (!isOpen) {
@@ -79,15 +79,16 @@ export function MobileMenu({
 						</Link>
 					))}
 				</nav>
-				<Link
+				<a
 					className="mobile-menu-cta"
-					to="/"
-					hash={signupHash}
+					href={signupUrl}
+					target="_blank"
+					rel="noopener"
 					onClick={onClose}
 				>
 					Inscrever-se
 					<ArrowUpRight size={16} />
-				</Link>
+				</a>
 			</div>
 		</div>
 	);

@@ -23,6 +23,7 @@ gsap.registerPlugin(ScrollTrigger);
 export const Route = createFileRoute("/")({ component: Home });
 
 const eventStartAt = new Date("2026-10-16T00:00:00-03:00").getTime();
+const signupUrl = "https://app.ciaticket.com.br/e/EPJEPG26";
 const slavieroBookingUrl =
 	"https://book.omnibees.com/chain/1409/hotel/15710?c=1409&currencyId=16&lang=pt-BR&q=15710";
 
@@ -50,7 +51,7 @@ const quickLinks = [
 	{ href: "/hospedagem", icon: Bed, label: "Hospedagem" },
 	// Locais fica oculto até a confirmação final dos pontos do evento.
 	// { href: "/locais", icon: MapPin, label: "Locais" },
-	{ href: "#inscricao", icon: Ticket, label: "Inscrição" },
+	{ href: signupUrl, icon: Ticket, label: "Inscrição", external: true },
 	{ href: "/patrocinadores", icon: Handshake, label: "Patrocinadores" },
 ];
 
@@ -296,7 +297,9 @@ function Home() {
 							<div className="event-actions">
 								<a
 									className="event-button event-button--highlight"
-									href="#inscricao"
+									href={signupUrl}
+									target="_blank"
+									rel="noopener"
 								>
 									Fazer inscrição
 								</a>
@@ -346,8 +349,14 @@ function Home() {
 
 				<section className="event-quicklinks" aria-label="Acessos rápidos">
 					<div className="event-container event-quicklinks__grid">
-						{quickLinks.map(({ href, icon: Icon, label }) => (
-							<a href={href} className="event-quicklink" key={label}>
+						{quickLinks.map(({ href, icon: Icon, label, external }) => (
+							<a
+								href={href}
+								className="event-quicklink"
+								target={external ? "_blank" : undefined}
+								rel={external ? "noopener" : undefined}
+								key={label}
+							>
 								<Icon size={18} />
 								<span>{label}</span>
 							</a>
@@ -503,9 +512,9 @@ function Home() {
 							</p>
 							<a
 								className="event-button event-button--highlight event-final-cta__button"
-								href="https://example.com"
+								href={signupUrl}
 								target="_blank"
-								rel="noreferrer"
+								rel="noopener"
 							>
 								Fazer minha inscrição agora
 							</a>

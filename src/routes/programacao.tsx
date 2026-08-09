@@ -16,6 +16,8 @@ export const Route = createFileRoute("/programacao")({
 	component: SchedulePage,
 });
 
+const signupUrl = "https://app.ciaticket.com.br/e/EPJEPG26";
+
 type ScheduleEvent = {
 	time: string;
 	track: string;
@@ -193,7 +195,9 @@ function SchedulePage() {
 					<section className="schedule-cta">
 						<h2>{selectedDay.ctaTitle}</h2>
 						<p>{selectedDay.ctaDescription}</p>
-						<a href="/#inscricao">Inscrever-se Agora</a>
+						<a href={signupUrl} target="_blank" rel="noopener">
+							Inscrever-se Agora
+						</a>
 					</section>
 				</div>
 			</main>

@@ -1,5 +1,7 @@
 import { Facebook, Instagram } from "lucide-react";
 
+const signupUrl = "https://app.ciaticket.com.br/e/EPJEPG26";
+
 export function Footer() {
 	const currentYear = new Date().getFullYear();
 
@@ -46,7 +48,9 @@ export function Footer() {
 					<a href="/hospedagem">Hospedagem</a>
 					<a href="/patrocinadores">Patrocinadores</a>
 					<a href="/fotos">Fotos</a>
-					<a href="/#inscricao">Inscrever-se</a>
+					<a href={signupUrl} target="_blank" rel="noopener">
+						Inscrever-se
+					</a>
 				</nav>
 				<nav aria-label="Suporte">
 					<span>Suporte</span>
