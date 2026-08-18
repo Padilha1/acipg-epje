@@ -112,19 +112,6 @@ const visits = [
 	},
 	{
 		category: "Indústria",
-		title: "Ambev/Cervejaria Adriática",
-		location: "BR-376, km 462 - Ponta Grossa",
-		image: "/visits/ambev.webp",
-		imageTone: "industria",
-		requirementTitle: "Orientações preliminares",
-		requirements: [
-			"Documento original com foto",
-			"Calçado fechado",
-			"Calça comprida",
-		],
-	},
-	{
-		category: "Indústria",
 		title: "Tetra Pak",
 		location: "Rodovia BR-376, km 499,5 - Colônia Dona Luíza",
 		image: "/visits/tetra-pak.webp",
@@ -151,10 +138,8 @@ const visits = [
 	},
 	{
 		category: "Indústria",
-		title: "Biofragane",
-		location: "Rua Guilherme Wiecheteck, 1019",
-		image: "/sponsors/logos/biofragane.webp",
-		imageFit: "logo-soft",
+		title: "Continental",
+		location: "Local a confirmar",
 		imageTone: "industria",
 		requirementTitle: "Orientações preliminares",
 		requirements: [
@@ -191,7 +176,7 @@ const visits = [
 	},
 	{
 		category: "Mentorias",
-		title: "Mentoria - Brigatta",
+		title: "Aula Show Brigatta",
 		location: "Atividade de mentoria - local a confirmar",
 		image: "/sponsors/logos/brigatta.webp",
 		imageFit: "logo-fill",
@@ -201,6 +186,19 @@ const visits = [
 			"Documento original com foto",
 			"Confirmação da inscrição",
 			"Material para anotações, se desejar",
+		],
+	},
+	{
+		category: "Mentorias",
+		title: "Rodada de negócios ACIPG",
+		location: "ACIPG",
+		image: "/acipg-hero.webp",
+		imageTone: "mentorias",
+		requirementTitle: "Orientações preliminares",
+		requirements: [
+			"Exclusiva para mulheres",
+			"Documento original com foto",
+			"Confirmação da inscrição",
 		],
 	},
 	{
@@ -248,6 +246,18 @@ const visits = [
 		title: "Espaço Smart",
 		location: "Av. Visc. de Mauá, 3460",
 		image: "/visits/smart.webp",
+		imageTone: "servicos",
+		requirementTitle: "Orientações preliminares",
+		requirements: [
+			"Documento original com foto",
+			"Chegada com antecedência",
+			"Demais regras serão confirmadas pela organização",
+		],
+	},
+	{
+		category: "Serviços e Outros",
+		title: "Outback",
+		location: "Local a confirmar",
 		imageTone: "servicos",
 		requirementTitle: "Orientações preliminares",
 		requirements: [

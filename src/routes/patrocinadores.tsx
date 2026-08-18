@@ -77,7 +77,6 @@ const sponsorSections: SponsorSection[] = [
 				name: "Mich",
 				src: "/sponsors/logos/mich.webp",
 				size: "large",
-				tone: "dark",
 			},
 			{
 				name: "Brigatta",
@@ -85,6 +84,11 @@ const sponsorSections: SponsorSection[] = [
 				size: "large",
 				fit: "fill",
 				tone: "dark",
+			},
+			{
+				name: "CACICPAR",
+				src: "/sponsors/logos/cacicpar.webp",
+				size: "large",
 			},
 		],
 	},
@@ -104,6 +108,21 @@ const sponsorSections: SponsorSection[] = [
 			{
 				name: "Win Target",
 				src: "/sponsors/logos/win-target.webp",
+			},
+			{
+				name: "DBL Turismo",
+				src: "/sponsors/logos/dbl-turismo.webp",
+				size: "large",
+			},
+			{
+				name: "Thanile Ratti",
+				src: "/sponsors/logos/thani-ratti.webp",
+				size: "large",
+			},
+			{
+				name: "Pega Essa Ideia",
+				src: "/sponsors/logos/pega-essa-ideia.webp",
+				size: "large",
 			},
 		],
 	},
@@ -144,7 +163,6 @@ const sponsorSections: SponsorSection[] = [
 			{
 				name: "Estação Hub",
 				src: "/sponsors/logos/logo-1.webp",
-				tone: "dark",
 			},
 			{
 				name: "Fidelitarget",
@@ -177,6 +195,10 @@ const sponsorSections: SponsorSection[] = [
 			{
 				name: "Tetra Pak",
 				src: "/sponsors/logos/tetra-pak.webp",
+			},
+			{
+				name: "Maluí",
+				src: "/sponsors/logos/malui.webp",
 			},
 		],
 	},

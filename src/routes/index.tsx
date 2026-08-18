@@ -103,7 +103,6 @@ const sponsorLogos = [
 		name: "Mich",
 		src: "/sponsors/logos/mich.webp",
 		variant: "wide",
-		tone: "dark",
 	},
 	{
 		id: "rogerio-junior",
@@ -122,6 +121,42 @@ const sponsorLogos = [
 		name: "Win Target",
 		src: "/sponsors/logos/win-target.webp",
 		variant: "tall",
+	},
+	{
+		id: "brigatta",
+		name: "Brigatta",
+		src: "/sponsors/logos/brigatta.webp",
+		variant: "square",
+	},
+	{
+		id: "cacicpar",
+		name: "CACICPAR",
+		src: "/sponsors/logos/cacicpar.webp",
+		variant: "wide",
+	},
+	{
+		id: "dbl-turismo",
+		name: "DBL Turismo",
+		src: "/sponsors/logos/dbl-turismo.webp",
+		variant: "wide",
+	},
+	{
+		id: "thanile-ratti",
+		name: "Thanile Ratti",
+		src: "/sponsors/logos/thani-ratti.webp",
+		variant: "wide",
+	},
+	{
+		id: "pega-essa-ideia",
+		name: "Pega Essa Ideia",
+		src: "/sponsors/logos/pega-essa-ideia.webp",
+		variant: "square",
+	},
+	{
+		id: "malui",
+		name: "Maluí",
+		src: "/sponsors/logos/malui.webp",
+		variant: "wide",
 	},
 ];
 
@@ -383,6 +418,7 @@ function Home() {
 												className={[
 													"event-sponsor-logo",
 													`event-sponsor-logo--${sponsor.variant}`,
+													`event-sponsor-logo--${sponsor.id}`,
 													sponsor.tone === "dark"
 														? "event-sponsor-logo--dark"
 														: undefined,

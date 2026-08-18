@@ -2,6 +2,29 @@ import { Facebook, Instagram } from "lucide-react";
 
 const signupUrl = "https://app.ciaticket.com.br/e/EPJEPG26";
 
+const footerPartnerLogos = [
+	{
+		name: "FACIAP Jovem",
+		src: "/partners/footer-faciap-jovem.webp",
+	},
+	{
+		name: "Sicoob",
+		src: "/partners/footer-sicoob.webp",
+	},
+	{
+		name: "Sebrae",
+		src: "/partners/footer-sebrae.webp",
+	},
+	{
+		name: "ACIPG",
+		src: "/partners/footer-acipg.webp",
+	},
+	{
+		name: "CACICPAR",
+		src: "/partners/footer-cacicpar.webp",
+	},
+];
+
 export function Footer() {
 	const currentYear = new Date().getFullYear();
 
@@ -57,6 +80,11 @@ export function Footer() {
 					<a href="mailto:acipgjovem@gmail.com">acipgjovem@gmail.com</a>
 				</nav>
 			</div>
+			<section className="event-container event-footer__partners" aria-label="Apoio">
+				{footerPartnerLogos.map((logo) => (
+					<img src={logo.src} alt={logo.name} loading="lazy" key={logo.name} />
+				))}
+			</section>
 			<div className="event-container event-footer__bottom">
 				<span>
 					© {currentYear} Acipg Jovem EPJE. Todos os direitos reservados.
