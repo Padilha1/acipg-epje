@@ -39,9 +39,9 @@ const schedule = [
 		"Organização dos grupos e saída para as atividades técnicas.",
 	],
 	[
-		"15h30-16h",
+		"16h",
 		"Visita Heineken",
-		"Saída específica para a rota Heineken, com visita agendada para 16h.",
+		"Saída 16h para a rota Heineken.",
 	],
 	[
 		"19:00",

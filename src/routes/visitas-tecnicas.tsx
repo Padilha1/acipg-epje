@@ -327,7 +327,7 @@ function getRestrictions(visit: (typeof visits)[number]) {
 		return baseRestrictions;
 	}
 
-	return [...baseRestrictions, "Crianças"];
+	return [...baseRestrictions, "Menores de idade"];
 }
 
 function TechnicalVisitsPage() {
