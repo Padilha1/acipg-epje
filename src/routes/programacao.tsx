@@ -56,8 +56,6 @@ const scheduleDays: ScheduleDay[] = [
 				category: "Abertura",
 				title: "Abertura e credenciamento",
 				location: "ACIPG",
-				host: "Coordenação Visita",
-				role: "Equipe Organizadora",
 				description:
 					"Recepção dos participantes, abertura oficial e retirada dos materiais.",
 				variant: "standard",
@@ -68,12 +66,21 @@ const scheduleDays: ScheduleDay[] = [
 				track: "Visitas Técnicas",
 				category: "Rotas Técnicas",
 				title: "Saída para visitas técnicas",
-				location: "Empresas confirmadas",
-				host: "Coordenação Visita",
-				role: "Equipe Organizadora",
+				location: "ACIPG",
 				description:
 					"Organização dos grupos e saída para as atividades técnicas.",
 				variant: "featured",
+				icon: RouteIcon,
+			},
+			{
+				time: "15h30-16h",
+				track: "Visita Heineken",
+				category: "Rotas Técnicas",
+				title: "Visita Heineken",
+				location: "ACIPG",
+				description:
+					"Saída específica para a rota Heineken, com visita agendada para 16h.",
+				variant: "standard",
 				icon: RouteIcon,
 			},
 			{
@@ -82,8 +89,6 @@ const scheduleDays: ScheduleDay[] = [
 				category: "Networking",
 				title: "Happy Hour - Festa a Fantasia",
 				location: "Local: Sol de Verão",
-				host: "Coordenação Visita",
-				role: "Equipe Organizadora",
 				description: "Com direto à concurso e premiação de melhor fantasia!",
 				variant: "break",
 				icon: PartyPopper,
@@ -104,8 +109,6 @@ const scheduleDays: ScheduleDay[] = [
 				category: "Reunião Oficial",
 				title: "ASSEMBLEIA GERAL ORDINÁRIA",
 				location: "Hotel Slaviero (Oficial)",
-				host: "Coordenação Visita",
-				role: "Equipe Organizadora",
 				description:
 					"Momento com palestra Magna, networking, associativismo na prática e repasses da federação.",
 				variant: "featured",
@@ -126,8 +129,6 @@ const scheduleDays: ScheduleDay[] = [
 				category: "Encerramento",
 				title: "PÓS EVENTO - FINAL DO JOJEPS",
 				location: "Parque Estadual de Vila Velha",
-				host: "Coordenação Visita",
-				role: "Equipe Organizadora",
 				description:
 					"Após a finalização do EPJE, a FACIAP Jovem se reúne no parque para a final dos Jogos dos Jovens Empreendedores do Paraná!",
 				variant: "standard",

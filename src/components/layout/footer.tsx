@@ -17,7 +17,7 @@ const footerPartnerLogos = [
 	},
 	{
 		name: "ACIPG",
-		src: "/partners/footer-acipg.webp",
+		src: "/partners/footer-acipg-only.webp",
 	},
 	{
 		name: "CACICPAR",
@@ -70,7 +70,6 @@ export function Footer() {
 					<span>Evento</span>
 					<a href="/hospedagem">Hospedagem</a>
 					<a href="/patrocinadores">Patrocinadores</a>
-					<a href="/fotos">Fotos</a>
 					<a href={signupUrl} target="_blank" rel="noopener">
 						Inscrever-se
 					</a>

@@ -1401,8 +1401,11 @@ body:has(.event-home) {
 
 .event-logo img {
   display: block;
-  width: clamp(6rem, 14vw, 7.75rem);
+  width: clamp(7.5rem, 16vw, 9.5rem);
+  max-height: 3rem;
   height: auto;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(14%) sepia(18%) saturate(857%) hue-rotate(286deg) brightness(92%) contrast(90%);
 }
 
 .event-nav {
@@ -1608,6 +1611,11 @@ body:has(.event-home) {
   margin: 0;
   color: var(--neutral-600);
   font-size: 0.92rem;
+}
+
+.event-hero p strong {
+  color: var(--brand-800);
+  font-weight: 900;
 }
 
 .event-actions {
@@ -1988,6 +1996,11 @@ body:has(.event-home) {
 .event-sponsor-logo--malui img {
   max-width: 84%;
   max-height: 66%;
+}
+
+.event-sponsor-logo--deca-festas img {
+  max-width: 82%;
+  max-height: 68%;
 }
 
 @keyframes sponsor-marquee {
@@ -3154,12 +3167,39 @@ body:has(.technical-visits-page) {
   padding: 1rem;
 }
 
+.technical-visit-card__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
 .technical-visit-card h2 {
   margin: 0;
   color: var(--neutral-900);
   font-size: 0.95rem;
   font-weight: 900;
   letter-spacing: -0.015em;
+}
+
+.technical-visit-card__notice {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 1.8rem;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid rgb(36 127 115 / 24%);
+  border-radius: 999px;
+  background: var(--highlight-100);
+  color: var(--highlight-700);
+  font-size: 0.66rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.technical-visit-card__notice svg {
+  flex: 0 0 auto;
 }
 
 .technical-visit-card__location {

@@ -11,8 +11,6 @@ type SponsorLogo = {
 	src: string;
 	size?: "hero" | "large";
 	emphasis?: "supporter";
-	fit?: "fill";
-	tone?: "dark";
 };
 
 type SponsorSection = {
@@ -82,8 +80,6 @@ const sponsorSections: SponsorSection[] = [
 				name: "Brigatta",
 				src: "/sponsors/logos/brigatta.webp",
 				size: "large",
-				fit: "fill",
-				tone: "dark",
 			},
 			{
 				name: "CACICPAR",
@@ -124,6 +120,16 @@ const sponsorSections: SponsorSection[] = [
 				src: "/sponsors/logos/pega-essa-ideia.webp",
 				size: "large",
 			},
+			{
+				name: "Fernanda Suguiama",
+				src: "/sponsors/logos/fernanda-suguiama.webp",
+				size: "large",
+			},
+			{
+				name: "Eletroluz",
+				src: "/sponsors/logos/eletroluz.webp",
+				size: "large",
+			},
 		],
 	},
 	{
@@ -150,11 +156,6 @@ const sponsorSections: SponsorSection[] = [
 			{
 				name: "Ambev",
 				src: "/sponsors/logos/ambev.webp",
-			},
-			{
-				name: "BioFragane",
-				src: "/sponsors/logos/biofragane.webp",
-				emphasis: "supporter",
 			},
 			{
 				name: "Cargill",
@@ -200,6 +201,11 @@ const sponsorSections: SponsorSection[] = [
 				name: "Maluí",
 				src: "/sponsors/logos/malui.webp",
 			},
+			{
+				name: "Deca Eventos",
+				src: "/sponsors/logos/deca-festas.webp",
+				emphasis: "supporter",
+			},
 		],
 	},
 ];
@@ -232,12 +238,6 @@ function SponsorsPage() {
 											logo.size ? `sponsors-logo-card--${logo.size}` : undefined,
 											logo.emphasis === "supporter"
 												? "sponsors-logo-card--supporter"
-												: undefined,
-											logo.fit === "fill"
-												? "sponsors-logo-card--fill"
-												: undefined,
-											logo.tone === "dark"
-												? "sponsors-logo-card--dark"
 												: undefined,
 										]
 											.filter(Boolean)

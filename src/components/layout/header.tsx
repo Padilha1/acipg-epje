@@ -23,7 +23,8 @@ const navItems: HeaderNavItem[] = [
 	{ id: "patrocinadores", label: "Patrocinadores", to: "/patrocinadores" },
 	// Locais fica oculto até a confirmação final dos pontos do evento.
 	// { id: "locais", label: "Locais", to: "/locais" },
-	{ id: "fotos", label: "Fotos", to: "/fotos" },
+	// Fotos fica oculto temporariamente.
+	// { id: "fotos", label: "Fotos", to: "/fotos" },
 ];
 
 const signupUrl = "https://app.ciaticket.com.br/e/EPJEPG26";
@@ -58,7 +59,7 @@ export function Header({ active, className }: HeaderProps) {
 				hash={active === "inicio" ? "inicio" : undefined}
 				aria-label="Página inicial Visita Técnica PG"
 			>
-				<img src="/logo.webp" alt="Visita Técnica PG" />
+				<img src="/logo-epje.webp" alt="EPJE Ponta Grossa" />
 			</Link>
 			<nav className="event-nav" aria-label="Navegação principal">
 				{navItems.map((item) => (

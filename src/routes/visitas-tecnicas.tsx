@@ -3,8 +3,9 @@ import {
 	Ban,
 	Building2,
 	ChevronDown,
+	Clock3,
 	ClipboardCheck,
-	MapPin,
+	Info,
 	Search,
 	X,
 } from "lucide-react";
@@ -20,11 +21,13 @@ const restrictionsByCategory: Record<string, string[]> = {
 	Agro: [
 		"Entrada sem documento de identificação",
 		"Calçado aberto ou salto alto",
+		"Uso de adereços",
 		"Fotografar áreas restritas sem autorização",
 	],
 	Indústria: [
 		"Entrada sem documento de identificação",
 		"Calçado aberto, shorts ou bermuda",
+		"Uso de adereços",
 		"Fotografar áreas produtivas sem autorização",
 	],
 	"Tecnologia e Inovação": [
@@ -48,7 +51,8 @@ const visits = [
 	{
 		category: "Agro",
 		title: "Cargill",
-		location: "Rodovia BR-376, km 506 - Distrito Industrial",
+		location:
+			"Conheça de perto uma das maiores operações globais do agronegócio, conectando produção agrícola, processamento e cadeia de alimentos.",
 		image: "/visits/cargill.webp",
 		imageTone: "agro",
 		requirementTitle: "Orientações preliminares",
@@ -61,7 +65,8 @@ const visits = [
 	{
 		category: "Agro",
 		title: "Agrocete",
-		location: "Rua Anna Scremin, 800 - Distrito Industrial",
+		location:
+			"Veja como são desenvolvidas e produzidas soluções em nutrição, fisiologia vegetal e biológicos para aumentar a performance das lavouras.",
 		image: "/visits/agrocete.webp",
 		imageTone: "agro",
 		requirementTitle: "Orientações preliminares",
@@ -86,8 +91,9 @@ const visits = [
 	},
 	{
 		category: "Agro",
-		title: "Frísia/Batavo",
-		location: "Rodovia PR-151, km 316 - Ponta Grossa",
+		title: "Frísia Colônia Holandesa",
+		location:
+			"Conheça a trajetória da Colônia Holandesa e descubra como associativismo, tradição e inovação ajudaram a construir a história e o desenvolvimento da Frísia.",
 		image: "/visits/frisia-batavo.webp",
 		imageTone: "agro",
 		requirementTitle: "Orientações preliminares",
@@ -100,9 +106,11 @@ const visits = [
 	{
 		category: "Indústria",
 		title: "Heineken",
-		location: "Av. Pref. Luiz Alberto de Castro, 1000 - Contorno",
+		location:
+			"Viva a experiência Inside the Star e conheça por dentro o processo produtivo, a operação e os bastidores de uma das maiores cervejarias do mundo.",
 		image: "/visits/heineken.webp",
 		imageTone: "industria",
+		notice: "Visita às 16h",
 		requirementTitle: "Requisitos de segurança",
 		requirements: [
 			"Uso obrigatório de calçado fechado",
@@ -112,8 +120,23 @@ const visits = [
 	},
 	{
 		category: "Indústria",
+		title: "Ambev",
+		location:
+			"Do grão ao copo: a experiência incrível de conhecer uma das fábricas da maior cervejaria da América Latina!",
+		image: "/visits/ambev.webp",
+		imageTone: "industria",
+		requirementTitle: "Orientações preliminares",
+		requirements: [
+			"Documento original com foto",
+			"Calçado fechado",
+			"Calça comprida",
+		],
+	},
+	{
+		category: "Indústria",
 		title: "Tetra Pak",
-		location: "Rodovia BR-376, km 499,5 - Colônia Dona Luíza",
+		location:
+			"Veja como tecnologia, automação e excelência industrial se unem na produção de embalagens para alimentos e bebidas.",
 		image: "/visits/tetra-pak.webp",
 		imageTone: "industria",
 		requirementTitle: "Orientações preliminares",
@@ -125,8 +148,9 @@ const visits = [
 	},
 	{
 		category: "Indústria",
-		title: "Maltaria",
-		location: "Rodovia Senador Flávio Carvalho Guimarães, s/n - Boa Vista",
+		title: "Maltaria Campos Gerais",
+		location:
+			"Da cevada ao malte: acompanhe a transformação do grão que conecta o campo à indústria cervejeira.",
 		image: "/visits/maltaria.webp",
 		imageTone: "industria",
 		requirementTitle: "Orientações preliminares",
@@ -139,7 +163,9 @@ const visits = [
 	{
 		category: "Indústria",
 		title: "Continental",
-		location: "Local a confirmar",
+		location:
+			"Conheça a tecnologia por trás de correias e sistemas industriais e automotivos que atendem setores como agro, mineração e mobilidade.",
+		image: "/visits/continental.webp",
 		imageTone: "industria",
 		requirementTitle: "Orientações preliminares",
 		requirements: [
@@ -151,33 +177,38 @@ const visits = [
 	{
 		category: "Tecnologia e Inovação",
 		title: "Estação Hub",
-		location: "Rua Benjamin Constant - Centro",
+		location:
+			"Conheça um ambiente onde startups, empresas, universidades e poder público se conectam para transformar ideias em soluções e novos negócios.",
 		image: "/visits/estacao-hub.webp",
 		imageTone: "tecnologia",
 		requirementTitle: "Orientações preliminares",
 		requirements: [
 			"Documento original com foto",
 			"Chegada com antecedência",
+			"Crianças permitidas nesta visita",
 			"Demais regras serão confirmadas pela organização",
 		],
 	},
 	{
 		category: "Tecnologia e Inovação",
 		title: "Inbix",
-		location: "Rua Ricardo Lustosa Ribas, 651 - Estrela",
+		location:
+			"Veja como inteligência artificial, aprendizagem e inovação estão transformando pessoas, empresas e a forma de fazer negócios.",
 		image: "/visits/inbix.webp",
 		imageTone: "tecnologia",
 		requirementTitle: "Orientações preliminares",
 		requirements: [
 			"Documento original com foto",
 			"Chegada com antecedência",
+			"Crianças permitidas nesta visita",
 			"Demais regras serão confirmadas pela organização",
 		],
 	},
 	{
 		category: "Mentorias",
 		title: "Aula Show Brigatta",
-		location: "Atividade de mentoria - local a confirmar",
+		location:
+			"Empreendedorismo na prática: uma aula-show sobre gestão, experiência do cliente e os desafios de construir um negócio.",
 		image: "/sponsors/logos/brigatta.webp",
 		imageFit: "logo-fill",
 		imageTone: "mentorias",
@@ -191,7 +222,8 @@ const visits = [
 	{
 		category: "Mentorias",
 		title: "Rodada de negócios ACIPG",
-		location: "ACIPG",
+		location:
+			"Participe de uma rodada de negócios conduzida pelo Sebrae, com a participação de duas mulheres da área de associativismo, promovendo conexões, troca de experiências e novas oportunidades.",
 		image: "/acipg-hero.webp",
 		imageTone: "mentorias",
 		requirementTitle: "Orientações preliminares",
@@ -204,7 +236,8 @@ const visits = [
 	{
 		category: "Mentorias",
 		title: "PLSS + Rivus",
-		location: "Ponta Grossa - PR",
+		location:
+			"Tecnologia e gestão lado a lado: uma mentoria para conectar transformação digital, eficiência de processos e resultados.",
 		image: "/sponsors/logos/pelissari-rivus.webp",
 		imageFit: "logo-muted",
 		imageTone: "mentorias",
@@ -212,13 +245,15 @@ const visits = [
 		requirements: [
 			"Documento original com foto",
 			"Confirmação da inscrição",
+			"Crianças permitidas nesta visita",
 			"Material para anotações, se desejar",
 		],
 	},
 	{
 		category: "Serviços e Outros",
 		title: "Palmeira Ambiental",
-		location: "Rodovia BR-376, Av. B, 1657 - Colônia Dona Luíza",
+		location:
+			"Veja na prática como resíduos industriais são coletados, tratados e destinados, transformando gestão ambiental em soluções para empresas e para o meio ambiente.",
 		image: "/visits/palmeira-ambiental.webp",
 		imageTone: "servicos",
 		requirementTitle: "Orientações preliminares",
@@ -231,7 +266,8 @@ const visits = [
 	{
 		category: "Serviços e Outros",
 		title: "Operário Ferroviário",
-		location: "Rua Padre Nóbrega, 265 - Oficinas",
+		location:
+			"Conheça os bastidores de um clube profissional e descubra como gestão, estrutura, marca e paixão pelo futebol se conectam dentro e fora de campo.",
 		image: "/visits/operario.webp",
 		imageTone: "servicos",
 		requirementTitle: "Orientações preliminares",
@@ -244,20 +280,9 @@ const visits = [
 	{
 		category: "Serviços e Outros",
 		title: "Espaço Smart",
-		location: "Av. Visc. de Mauá, 3460",
+		location:
+			"Conheça de perto como tecnologia, industrialização e sustentabilidade estão transformando a construção civil por meio do Light Steel Frame.",
 		image: "/visits/smart.webp",
-		imageTone: "servicos",
-		requirementTitle: "Orientações preliminares",
-		requirements: [
-			"Documento original com foto",
-			"Chegada com antecedência",
-			"Demais regras serão confirmadas pela organização",
-		],
-	},
-	{
-		category: "Serviços e Outros",
-		title: "Outback",
-		location: "Local a confirmar",
 		imageTone: "servicos",
 		requirementTitle: "Orientações preliminares",
 		requirements: [
@@ -269,6 +294,11 @@ const visits = [
 ];
 
 const categories = Array.from(new Set(visits.map((visit) => visit.category)));
+const visitsThatAllowChildren = new Set([
+	"Estação Hub",
+	"Inbix",
+	"PLSS + Rivus",
+]);
 
 function normalizeSearch(value: string) {
 	return value
@@ -282,15 +312,21 @@ function getCategoryId(category: string) {
 }
 
 function getRestrictions(visit: (typeof visits)[number]) {
-	if (visit.title === "Heineken") {
-		return [
-			"Calçado aberto, shorts ou bermuda",
-			"Cabelos soltos em áreas operacionais",
-			"Fotografar áreas produtivas sem autorização",
-		];
+	const baseRestrictions =
+		visit.title === "Heineken"
+			? [
+					"Calçado aberto, shorts ou bermuda",
+					"Cabelos soltos em áreas operacionais",
+					"Uso de adereços",
+					"Fotografar áreas produtivas sem autorização",
+				]
+			: restrictionsByCategory[visit.category] ?? [];
+
+	if (visitsThatAllowChildren.has(visit.title)) {
+		return baseRestrictions;
 	}
 
-	return restrictionsByCategory[visit.category] ?? [];
+	return [...baseRestrictions, "Crianças"];
 }
 
 function TechnicalVisitsPage() {
@@ -446,9 +482,17 @@ function TechnicalVisitCard({ visit }: { visit: (typeof visits)[number] }) {
 				<Building2 size={42} />
 			</div>
 			<div className="technical-visit-card__body">
-				<h2>{visit.title}</h2>
+				<div className="technical-visit-card__heading">
+					<h2>{visit.title}</h2>
+					{"notice" in visit ? (
+						<div className="technical-visit-card__notice">
+							<Clock3 size={14} />
+							<span>{visit.notice}</span>
+						</div>
+					) : null}
+				</div>
 				<p className="technical-visit-card__location">
-					<MapPin size={15} />
+					<Info size={15} />
 					{visit.location}
 				</p>
 				<div className="technical-visit-card__note">

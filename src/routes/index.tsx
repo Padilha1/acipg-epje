@@ -39,6 +39,11 @@ const schedule = [
 		"Organização dos grupos e saída para as atividades técnicas.",
 	],
 	[
+		"15h30-16h",
+		"Visita Heineken",
+		"Saída específica para a rota Heineken, com visita agendada para 16h.",
+	],
+	[
 		"19:00",
 		"Happy Hour",
 		"Momento de integração e networking após as visitas técnicas.",
@@ -126,7 +131,7 @@ const sponsorLogos = [
 		id: "brigatta",
 		name: "Brigatta",
 		src: "/sponsors/logos/brigatta.webp",
-		variant: "square",
+		variant: "wide",
 	},
 	{
 		id: "cacicpar",
@@ -153,9 +158,27 @@ const sponsorLogos = [
 		variant: "square",
 	},
 	{
+		id: "fernanda-suguiama",
+		name: "Fernanda Suguiama",
+		src: "/sponsors/logos/fernanda-suguiama.webp",
+		variant: "wide",
+	},
+	{
+		id: "eletroluz",
+		name: "Eletroluz",
+		src: "/sponsors/logos/eletroluz.webp",
+		variant: "wide",
+	},
+	{
 		id: "malui",
 		name: "Maluí",
 		src: "/sponsors/logos/malui.webp",
+		variant: "wide",
+	},
+	{
+		id: "deca-festas",
+		name: "Deca Eventos",
+		src: "/sponsors/logos/deca-festas.webp",
 		variant: "wide",
 	},
 ];
@@ -317,14 +340,9 @@ function Home() {
 				<section className="event-hero" id="inicio">
 					<div className="event-container event-hero__grid">
 						<div className="event-hero__content" data-home-reveal>
-							<span className="event-pill">
-								Ponta Grossa, PR - 16 e 17 de outubro, 2026
-							</span>
-							<h1>
-								Tudo o que você precisa para viver essa experiência em Ponta
-								Grossa
-							</h1>
+							<h1>Venha viver experiências marcantes em Ponta&nbsp;Grossa</h1>
 							<p>
+								<strong>16 e 17 de outubro de 2026.</strong>{" "}
 								Uma imersão técnica exclusiva nas maiores referências
 								industriais e agrícolas do Paraná. Conhecimento prático,
 								networking de alto nível e inovação.
@@ -419,9 +437,6 @@ function Home() {
 													"event-sponsor-logo",
 													`event-sponsor-logo--${sponsor.variant}`,
 													`event-sponsor-logo--${sponsor.id}`,
-													sponsor.tone === "dark"
-														? "event-sponsor-logo--dark"
-														: undefined,
 												]
 													.filter(Boolean)
 													.join(" ")}

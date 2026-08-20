@@ -20,20 +20,30 @@ const recommendedHotels = [
 	{
 		name: "Planalto Select Hotel",
 		address: "R. Sete de Setembro, 652 - Centro",
-		price: "R$ 349",
+		rateLabel: "R$ 349/noite",
 		tags: ["2,4 km da ACIPG", "Estacionamento grátis"],
+		url: "https://hotelplanalto.com/",
+	},
+	{
+		name: "Hotel Princess",
+		address: "Rua Minas Gerais, 2222 - Nova Rússia",
+		rateLabel: "Sob consulta",
+		tags: ["3,5 km da ACIPG", "Café da manhã"],
+		url: "https://hotelprincess.com.br/",
 	},
 	{
 		name: "Ibis Ponta Grossa",
 		address: "R. Dr. Paula Xavier, 21 - Centro",
-		price: "R$ 330",
+		rateLabel: "R$ 330/noite",
 		tags: ["1,8 km da ACIPG"],
+		url: "https://all.accor.com/booking/pt-br/ibis/hotels/ponta-grossa-state-of-parana-brazil",
 	},
 	{
 		name: "Premium Vila Velha Ponta Grossa",
 		address: "R. Balduíno Taques, 123 - Centro",
-		price: "R$ 385",
+		rateLabel: "R$ 385/noite",
 		tags: ["3,1 km da ACIPG", "Tradicional"],
+		url: "https://www.letsatlantica.com.br/premium-vila-velha-ponta-grossa",
 	},
 ];
 
@@ -104,7 +114,7 @@ function LodgingPage() {
 						<div>
 							<div className="lodging-section-heading">
 								<h2>Outras opções recomendadas</h2>
-								<span>3 opções próximas</span>
+								<span>4 opções próximas</span>
 							</div>
 							<div className="lodging-hotel-list">
 								{recommendedHotels.map((hotel, index) => (
@@ -136,9 +146,11 @@ function LodgingPage() {
 											</div>
 											<div className="lodging-hotel-card__footer">
 												<span>
-													A partir de <strong>{hotel.price}</strong>/noite
+													Tarifa <strong>{hotel.rateLabel}</strong>
 												</span>
-												<a href="/#inscricao">Ver detalhes</a>
+												<a href={hotel.url} target="_blank" rel="noreferrer">
+													Ver detalhes
+												</a>
 											</div>
 										</div>
 									</article>
