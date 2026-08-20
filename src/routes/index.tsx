@@ -372,11 +372,16 @@ function Home() {
 						</div>
 						<div className="event-hero__media" data-home-reveal>
 							<div className="event-hero-image">
-								<img
-									src="/acipg-hero.webp"
-									alt="Sede da ACIPG em Ponta Grossa"
-									fetchPriority="high"
-								/>
+								<video
+									controls
+									preload="metadata"
+									poster="/media/epje-video-poster.jpg"
+									aria-label="Vídeo do EPJE em Ponta Grossa"
+								>
+									<source src="/media/epje-video.webm" type="video/webm" />
+									<source src="/media/epje-video.mp4" type="video/mp4" />
+									Seu navegador não suporta a reprodução deste vídeo.
+								</video>
 							</div>
 							<div className="event-attendees">
 								<Users size={18} />
@@ -489,11 +494,11 @@ function Home() {
 						<div className="schedule-layout__media" data-home-reveal>
 							<div className="schedule-media-card">
 								<img
-									src="/locations/vila-velha-taca.webp"
-									alt="Formação da Taça no Parque Vila Velha"
+									src="/acipg-hero.webp"
+									alt="Sede da ACIPG em Ponta Grossa"
 									loading="lazy"
 								/>
-								<span>Parque Vila Velha</span>
+								<span>ACIPG</span>
 							</div>
 						</div>
 					</div>
