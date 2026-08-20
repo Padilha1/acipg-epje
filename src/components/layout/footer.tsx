@@ -20,6 +20,10 @@ const footerPartnerLogos = [
 		src: "/partners/footer-acipg-only.webp",
 	},
 	{
+		name: "ACIPG Jovem",
+		src: "/partners/footer-acipg.webp",
+	},
+	{
 		name: "CACICPAR",
 		src: "/partners/footer-cacicpar.webp",
 	},
