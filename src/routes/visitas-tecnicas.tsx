@@ -292,6 +292,20 @@ const visits = [
 			"Demais regras serão confirmadas pela organização",
 		],
 	},
+	{
+		category: "Serviços e Outros",
+		title: "Outback",
+		location:
+			"Conheça os bastidores de uma das marcas mais reconhecidas do setor de alimentação e veja como cultura, experiência do cliente, gestão de pessoas e padronização se conectam para entregar uma operação de sucesso.",
+		image: "/visits/outback.webp",
+		imageTone: "servicos",
+		requirementTitle: "Orientações preliminares",
+		requirements: [
+			"Documento original com foto",
+			"Chegada com antecedência",
+			"Demais regras serão confirmadas pela organização",
+		],
+	},
 ];
 
 const categories = Array.from(new Set(visits.map((visit) => visit.category)));

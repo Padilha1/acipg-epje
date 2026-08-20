@@ -130,6 +130,11 @@ const sponsorSections: SponsorSection[] = [
 				src: "/sponsors/logos/eletroluz.webp",
 				size: "large",
 			},
+			{
+				name: "CoupleAds",
+				src: "/sponsors/logos/coupleads.webp",
+				size: "large",
+			},
 		],
 	},
 	{

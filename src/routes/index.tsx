@@ -170,6 +170,12 @@ const sponsorLogos = [
 		variant: "wide",
 	},
 	{
+		id: "coupleads",
+		name: "CoupleAds",
+		src: "/sponsors/logos/coupleads.webp",
+		variant: "wide",
+	},
+	{
 		id: "malui",
 		name: "Maluí",
 		src: "/sponsors/logos/malui.webp",
