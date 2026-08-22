@@ -73,16 +73,6 @@ const scheduleDays: ScheduleDay[] = [
 				icon: RouteIcon,
 			},
 			{
-				time: "16h",
-				track: "Visita Heineken",
-				category: "Rotas Técnicas",
-				title: "Visita Heineken",
-				location: "ACIPG",
-				description: "Saída 16h para a rota Heineken.",
-				variant: "standard",
-				icon: RouteIcon,
-			},
-			{
 				time: "19:00",
 				track: "Happy Hour",
 				category: "Networking",

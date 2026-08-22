@@ -39,11 +39,6 @@ const schedule = [
 		"Organização dos grupos e saída para as atividades técnicas.",
 	],
 	[
-		"16h",
-		"Visita Heineken",
-		"Saída 16h para a rota Heineken.",
-	],
-	[
 		"19:00",
 		"Happy Hour",
 		"Momento de integração e networking após as visitas técnicas.",
