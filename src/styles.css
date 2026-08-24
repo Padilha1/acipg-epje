@@ -1700,12 +1700,12 @@ body:has(.event-home) {
 .event-hero-image {
   position: relative;
   z-index: 0;
-  aspect-ratio: 16 / 10;
-  height: clamp(16rem, 42vw, 23rem);
+  aspect-ratio: 4 / 3;
+  height: clamp(20rem, 50vw, 30rem);
   overflow: hidden;
   border: 1px solid rgb(255 255 255 / 68%);
   border-radius: var(--radius-lg);
-  background: var(--neutral-100);
+  background: var(--neutral-900);
   box-shadow: var(--shadow-md);
 }
 
@@ -1720,6 +1720,7 @@ body:has(.event-home) {
 
 .event-hero-image video {
   background: var(--neutral-900);
+  object-fit: contain;
 }
 
 .image-placeholder {
