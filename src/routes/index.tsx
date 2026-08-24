@@ -46,7 +46,7 @@ const schedule = [
 ];
 
 const quickLinks = [
-	{ href: "/visitas-tecnicas", icon: RouteIcon, label: "Visitas" },
+	{ href: "/visitas-tecnicas", icon: RouteIcon, label: "Visitas Técnicas" },
 	{ href: "/programacao", icon: CalendarDays, label: "Programação" },
 	{ href: "/hospedagem", icon: Bed, label: "Hospedagem" },
 	// Locais fica oculto até a confirmação final dos pontos do evento.
@@ -496,6 +496,22 @@ function Home() {
 								<span>ACIPG</span>
 							</div>
 						</div>
+					</div>
+				</section>
+
+				<section className="event-section event-section--visits">
+					<div className="event-container event-visits-cta">
+						<div>
+							<span className="event-pill">Rotas técnicas</span>
+							<h2>Escolha sua experiência técnica</h2>
+							<p>
+								Conheça as empresas participantes, orientações de segurança e
+								regras específicas de cada visita antes de definir sua rota.
+							</p>
+						</div>
+						<a className="event-button event-button--primary" href="/visitas-tecnicas">
+							Ver visitas técnicas <ArrowRight size={14} />
+						</a>
 					</div>
 				</section>
 
