@@ -86,6 +86,11 @@ const sponsorSections: SponsorSection[] = [
 				src: "/sponsors/logos/cacicpar.webp",
 				size: "large",
 			},
+			{
+				name: "Heineken",
+				src: "/sponsors/logos/heineken.webp",
+				size: "large",
+			},
 		],
 	},
 	{
@@ -177,10 +182,6 @@ const sponsorSections: SponsorSection[] = [
 			{
 				name: "FT Sementes",
 				src: "/sponsors/logos/ft-sementes.webp",
-			},
-			{
-				name: "Heineken",
-				src: "/sponsors/logos/heineken.webp",
 			},
 			{
 				name: "Maltaria Campos Gerais",
