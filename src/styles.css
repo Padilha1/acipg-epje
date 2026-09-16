@@ -2017,6 +2017,11 @@ body:has(.event-home) {
   max-height: 72%;
 }
 
+.event-sponsor-logo--sorriluz img {
+  max-width: 82%;
+  max-height: 68%;
+}
+
 @keyframes sponsor-marquee {
   from {
     transform: translate3d(0, 0, 0);
