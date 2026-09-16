@@ -77,6 +77,16 @@ const sponsorSections: SponsorSection[] = [
 				size: "large",
 			},
 			{
+				name: "Sorriluz",
+				src: "/sponsors/logos/sorriluz.webp",
+				size: "large",
+			},
+			{
+				name: "Localize Painéis",
+				src: "/sponsors/logos/localize-paineis.webp",
+				size: "large",
+			},
+			{
 				name: "Brigatta",
 				src: "/sponsors/logos/brigatta.webp",
 				size: "large",
@@ -138,6 +148,11 @@ const sponsorSections: SponsorSection[] = [
 			{
 				name: "CoupleAds",
 				src: "/sponsors/logos/coupleads.webp",
+				size: "large",
+			},
+			{
+				name: "Frank Google Meu Negócio",
+				src: "/sponsors/logos/frank-google-meu-negocio.webp",
 				size: "large",
 			},
 		],

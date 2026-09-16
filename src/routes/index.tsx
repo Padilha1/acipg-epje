@@ -105,6 +105,18 @@ const sponsorLogos = [
 		variant: "wide",
 	},
 	{
+		id: "sorriluz",
+		name: "Sorriluz",
+		src: "/sponsors/logos/sorriluz.webp",
+		variant: "wide",
+	},
+	{
+		id: "localize-paineis",
+		name: "Localize Painéis",
+		src: "/sponsors/logos/localize-paineis.webp",
+		variant: "wide",
+	},
+	{
 		id: "rogerio-junior",
 		name: "Rogério Junior",
 		src: "/sponsors/logos/rogerio-junior.webp",
@@ -168,6 +180,12 @@ const sponsorLogos = [
 		id: "coupleads",
 		name: "CoupleAds",
 		src: "/sponsors/logos/coupleads.webp",
+		variant: "wide",
+	},
+	{
+		id: "frank-google-meu-negocio",
+		name: "Frank Google Meu Negócio",
+		src: "/sponsors/logos/frank-google-meu-negocio.webp",
 		variant: "wide",
 	},
 	{
