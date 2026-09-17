@@ -194,10 +194,10 @@ const sponsorSections: SponsorSection[] = [
 				name: "Fidelitarget",
 				src: "/sponsors/logos/fidelitarget.webp",
 			},
-			{
-				name: "FT Sementes",
-				src: "/sponsors/logos/ft-sementes.webp",
-			},
+			// {
+			// 	name: "FT Sementes",
+			// 	src: "/sponsors/logos/ft-sementes.webp",
+			// },
 			{
 				name: "Maltaria Campos Gerais",
 				src: "/sponsors/logos/maltaria.webp",
@@ -206,10 +206,10 @@ const sponsorSections: SponsorSection[] = [
 				name: "Operário Ferroviário",
 				src: "/sponsors/logos/operario.webp",
 			},
-			{
-				name: "Palmeira Ambiental",
-				src: "/sponsors/logos/palmeira-ambiental.webp",
-			},
+			// {
+			// 	name: "Palmeira Ambiental",
+			// 	src: "/sponsors/logos/palmeira-ambiental.webp",
+			// },
 			{
 				name: "Pelissari",
 				src: "/sponsors/logos/pelissari.webp",

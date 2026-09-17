@@ -76,20 +76,20 @@ const visits = [
 			"Demais regras serão confirmadas pela organização",
 		],
 	},
-	{
-		category: "Agro",
-		title: "FT Sementes",
-		location:
-			"Conheça uma referência brasileira em pesquisa e melhoramento genético de soja, com foco em cultivares de alta performance.",
-		image: "/visits/ft-sementes.webp",
-		imageTone: "agro",
-		requirementTitle: "Orientações preliminares",
-		requirements: [
-			"Documento original com foto",
-			"Calçado fechado",
-			"Demais regras serão confirmadas pela organização",
-		],
-	},
+	// {
+	// 	category: "Agro",
+	// 	title: "FT Sementes",
+	// 	location:
+	// 		"Conheça uma referência brasileira em pesquisa e melhoramento genético de soja, com foco em cultivares de alta performance.",
+	// 	image: "/visits/ft-sementes.webp",
+	// 	imageTone: "agro",
+	// 	requirementTitle: "Orientações preliminares",
+	// 	requirements: [
+	// 		"Documento original com foto",
+	// 		"Calçado fechado",
+	// 		"Demais regras serão confirmadas pela organização",
+	// 	],
+	// },
 	{
 		category: "Agro",
 		title: "Frísia Colônia Holandesa",
@@ -250,20 +250,20 @@ const visits = [
 			"Material para anotações, se desejar",
 		],
 	},
-	{
-		category: "Serviços e Outros",
-		title: "Palmeira Ambiental",
-		location:
-			"Veja na prática como resíduos industriais são coletados, tratados e destinados, transformando gestão ambiental em soluções para empresas e para o meio ambiente.",
-		image: "/visits/palmeira-ambiental.webp",
-		imageTone: "servicos",
-		requirementTitle: "Orientações preliminares",
-		requirements: [
-			"Documento original com foto",
-			"Calçado fechado",
-			"Demais regras serão confirmadas pela organização",
-		],
-	},
+	// {
+	// 	category: "Serviços e Outros",
+	// 	title: "Palmeira Ambiental",
+	// 	location:
+	// 		"Veja na prática como resíduos industriais são coletados, tratados e destinados, transformando gestão ambiental em soluções para empresas e para o meio ambiente.",
+	// 	image: "/visits/palmeira-ambiental.webp",
+	// 	imageTone: "servicos",
+	// 	requirementTitle: "Orientações preliminares",
+	// 	requirements: [
+	// 		"Documento original com foto",
+	// 		"Calçado fechado",
+	// 		"Demais regras serão confirmadas pela organização",
+	// 	],
+	// },
 	{
 		category: "Serviços e Outros",
 		title: "Operário Ferroviário",
