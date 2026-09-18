@@ -40,6 +40,17 @@ const sponsorSections: SponsorSection[] = [
 				src: "/sponsors/logos/cia-ticket.webp",
 				size: "large",
 			},
+			{
+				name: "Heineken",
+				src: "/sponsors/logos/heineken.webp",
+				size: "large",
+			},
+			// Aguardando o envio da logo do Mercado Móveis.
+			// {
+			// 	name: "Mercado Móveis",
+			// 	src: "/sponsors/logos/mercado-moveis.webp",
+			// 	size: "large",
+			// },
 		],
 	},
 	{
@@ -97,8 +108,18 @@ const sponsorSections: SponsorSection[] = [
 				size: "large",
 			},
 			{
-				name: "Heineken",
-				src: "/sponsors/logos/heineken.webp",
+				name: "Salts Eventos",
+				src: "/sponsors/logos/salts-eventos.webp",
+				size: "large",
+			},
+			{
+				name: "Polaco Wood PG",
+				src: "/sponsors/logos/polaco.webp",
+				size: "large",
+			},
+			{
+				name: "Mercado Prado",
+				src: "/sponsors/logos/mercado-prado.webp",
 				size: "large",
 			},
 		],
@@ -151,8 +172,13 @@ const sponsorSections: SponsorSection[] = [
 				size: "large",
 			},
 			{
-				name: "Frank Google Meu Negócio",
-				src: "/sponsors/logos/frank-google-meu-negocio.webp",
+				name: "Miro Multimarcas",
+				src: "/sponsors/logos/miro-multimarcas.webp",
+				size: "large",
+			},
+			{
+				name: "DNA Contabilidade",
+				src: "/sponsors/logos/dna-contabilidade.webp",
 				size: "large",
 			},
 		],
@@ -217,6 +243,10 @@ const sponsorSections: SponsorSection[] = [
 			{
 				name: "Tetra Pak",
 				src: "/sponsors/logos/tetra-pak.webp",
+			},
+			{
+				name: "Frank Google Meu Negócio",
+				src: "/sponsors/logos/frank-google-meu-negocio.webp",
 			},
 			{
 				name: "Maluí",

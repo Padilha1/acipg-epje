@@ -69,6 +69,19 @@ const sponsorLogos = [
 		variant: "wide",
 	},
 	{
+		id: "heineken",
+		name: "Heineken",
+		src: "/sponsors/logos/heineken.webp",
+		variant: "wide",
+	},
+	// Aguardando o envio da logo do Mercado Móveis.
+	// {
+	// 	id: "mercado-moveis",
+	// 	name: "Mercado Móveis",
+	// 	src: "/sponsors/logos/mercado-moveis.webp",
+	// 	variant: "wide",
+	// },
+	{
 		id: "slaviero",
 		name: "Slaviero",
 		src: "/sponsors/logos/slaviero.webp",
@@ -147,6 +160,24 @@ const sponsorLogos = [
 		variant: "wide",
 	},
 	{
+		id: "salts-eventos",
+		name: "Salts Eventos",
+		src: "/sponsors/logos/salts-eventos.webp",
+		variant: "wide",
+	},
+	{
+		id: "polaco",
+		name: "Polaco Wood PG",
+		src: "/sponsors/logos/polaco.webp",
+		variant: "square",
+	},
+	{
+		id: "mercado-prado",
+		name: "Mercado Prado",
+		src: "/sponsors/logos/mercado-prado.webp",
+		variant: "square",
+	},
+	{
 		id: "dbl-turismo",
 		name: "DBL Turismo",
 		src: "/sponsors/logos/dbl-turismo.webp",
@@ -180,6 +211,18 @@ const sponsorLogos = [
 		id: "coupleads",
 		name: "CoupleAds",
 		src: "/sponsors/logos/coupleads.webp",
+		variant: "wide",
+	},
+	{
+		id: "miro-multimarcas",
+		name: "Miro Multimarcas",
+		src: "/sponsors/logos/miro-multimarcas.webp",
+		variant: "wide",
+	},
+	{
+		id: "dna-contabilidade",
+		name: "DNA Contabilidade",
+		src: "/sponsors/logos/dna-contabilidade.webp",
 		variant: "wide",
 	},
 	{
