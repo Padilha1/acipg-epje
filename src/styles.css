@@ -2019,7 +2019,7 @@ body:has(.event-home) {
 
 .event-sponsor-logo--sorriluz img {
   max-width: 82%;
-  max-height: 68%;
+  max-height: clamp(3rem, 4.8vw, 4rem);
 }
 
 @keyframes sponsor-marquee {
