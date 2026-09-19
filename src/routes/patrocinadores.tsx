@@ -45,12 +45,11 @@ const sponsorSections: SponsorSection[] = [
 				src: "/sponsors/logos/heineken.webp",
 				size: "large",
 			},
-			// Aguardando o envio da logo do Mercado Móveis.
-			// {
-			// 	name: "Mercado Móveis",
-			// 	src: "/sponsors/logos/mercado-moveis.webp",
-			// 	size: "large",
-			// },
+			{
+				name: "Lojas MM",
+				src: "/sponsors/logos/mercado-moveis.webp",
+				size: "large",
+			},
 		],
 	},
 	{

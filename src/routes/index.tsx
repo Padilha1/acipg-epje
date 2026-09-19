@@ -74,13 +74,12 @@ const sponsorLogos = [
 		src: "/sponsors/logos/heineken.webp",
 		variant: "wide",
 	},
-	// Aguardando o envio da logo do Mercado Móveis.
-	// {
-	// 	id: "mercado-moveis",
-	// 	name: "Mercado Móveis",
-	// 	src: "/sponsors/logos/mercado-moveis.webp",
-	// 	variant: "wide",
-	// },
+	{
+		id: "mercado-moveis",
+		name: "Lojas MM",
+		src: "/sponsors/logos/mercado-moveis.webp",
+		variant: "wide",
+	},
 	{
 		id: "slaviero",
 		name: "Slaviero",
