@@ -236,7 +236,7 @@ const visits = [
 	},
 	{
 		category: "Mentorias",
-		title: "PLSS + Rivus",
+		title: "Pelissari Fluídez Digital + Rivus",
 		location:
 			"Tecnologia e gestão lado a lado: uma mentoria para conectar transformação digital, eficiência de processos e resultados.",
 		image: "/sponsors/logos/pelissari-rivus.webp",
@@ -312,7 +312,7 @@ const categories = Array.from(new Set(visits.map((visit) => visit.category)));
 const visitsThatAllowChildren = new Set([
 	"Estação Hub",
 	"Inbix",
-	"PLSS + Rivus",
+	"Pelissari Fluídez Digital + Rivus",
 ]);
 
 function normalizeSearch(value: string) {

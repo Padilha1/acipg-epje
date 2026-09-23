@@ -97,6 +97,11 @@ const sponsorSections: SponsorSection[] = [
 				size: "large",
 			},
 			{
+				name: "Izmart Brasil",
+				src: "/sponsors/logos/izmart.webp",
+				size: "large",
+			},
+			{
 				name: "Brigatta",
 				src: "/sponsors/logos/brigatta.webp",
 				size: "large",

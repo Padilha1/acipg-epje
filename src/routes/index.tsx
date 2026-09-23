@@ -129,6 +129,12 @@ const sponsorLogos = [
 		variant: "wide",
 	},
 	{
+		id: "izmart",
+		name: "Izmart Brasil",
+		src: "/sponsors/logos/izmart.webp",
+		variant: "wide",
+	},
+	{
 		id: "rogerio-junior",
 		name: "Rogério Junior",
 		src: "/sponsors/logos/rogerio-junior.webp",
