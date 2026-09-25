@@ -135,6 +135,18 @@ const sponsorLogos = [
 		variant: "wide",
 	},
 	{
+		id: "pelissari",
+		name: "Pelissari",
+		src: "/sponsors/logos/pelissari.webp",
+		variant: "wide",
+	},
+	{
+		id: "royal-fit",
+		name: "Royal Fit",
+		src: "/sponsors/logos/royal-fit.webp",
+		variant: "wide",
+	},
+	{
 		id: "rogerio-junior",
 		name: "Rogério Junior",
 		src: "/sponsors/logos/rogerio-junior.webp",

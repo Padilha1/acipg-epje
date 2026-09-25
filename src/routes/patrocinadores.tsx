@@ -102,6 +102,16 @@ const sponsorSections: SponsorSection[] = [
 				size: "large",
 			},
 			{
+				name: "Pelissari",
+				src: "/sponsors/logos/pelissari.webp",
+				size: "large",
+			},
+			{
+				name: "Royal Fit",
+				src: "/sponsors/logos/royal-fit.webp",
+				size: "large",
+			},
+			{
 				name: "Brigatta",
 				src: "/sponsors/logos/brigatta.webp",
 				size: "large",
@@ -240,10 +250,6 @@ const sponsorSections: SponsorSection[] = [
 			// 	name: "Palmeira Ambiental",
 			// 	src: "/sponsors/logos/palmeira-ambiental.webp",
 			// },
-			{
-				name: "Pelissari",
-				src: "/sponsors/logos/pelissari.webp",
-			},
 			{
 				name: "Tetra Pak",
 				src: "/sponsors/logos/tetra-pak.webp",
