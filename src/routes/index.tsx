@@ -147,6 +147,12 @@ const sponsorLogos = [
 		variant: "wide",
 	},
 	{
+		id: "rl-jewelry",
+		name: "RL Jewelry",
+		src: "/sponsors/logos/rl-jewelry.webp",
+		variant: "square",
+	},
+	{
 		id: "rogerio-junior",
 		name: "Rogério Junior",
 		src: "/sponsors/logos/rogerio-junior.webp",

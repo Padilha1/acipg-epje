@@ -112,6 +112,11 @@ const sponsorSections: SponsorSection[] = [
 				size: "large",
 			},
 			{
+				name: "RL Jewelry",
+				src: "/sponsors/logos/rl-jewelry.webp",
+				size: "large",
+			},
+			{
 				name: "Brigatta",
 				src: "/sponsors/logos/brigatta.webp",
 				size: "large",
