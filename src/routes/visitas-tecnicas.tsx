@@ -62,20 +62,21 @@ const visits = [
 			"Demais regras serão confirmadas pela organização",
 		],
 	},
-	{
-		category: "Agro",
-		title: "Agrocete",
-		location:
-			"Veja como são desenvolvidas e produzidas soluções em nutrição, fisiologia vegetal e biológicos para aumentar a performance das lavouras.",
-		image: "/visits/agrocete.webp",
-		imageTone: "agro",
-		requirementTitle: "Orientações preliminares",
-		requirements: [
-			"Documento original com foto",
-			"Calçado fechado",
-			"Demais regras serão confirmadas pela organização",
-		],
-	},
+	// Visita da Agrocete temporariamente oculta.
+	// {
+	// 	category: "Agro",
+	// 	title: "Agrocete",
+	// 	location:
+	// 		"Veja como são desenvolvidas e produzidas soluções em nutrição, fisiologia vegetal e biológicos para aumentar a performance das lavouras.",
+	// 	image: "/visits/agrocete.webp",
+	// 	imageTone: "agro",
+	// 	requirementTitle: "Orientações preliminares",
+	// 	requirements: [
+	// 		"Documento original com foto",
+	// 		"Calçado fechado",
+	// 		"Demais regras serão confirmadas pela organização",
+	// 	],
+	// },
 	// {
 	// 	category: "Agro",
 	// 	title: "FT Sementes",
@@ -284,6 +285,20 @@ const visits = [
 		location:
 			"Conheça de perto como tecnologia, industrialização e sustentabilidade estão transformando a construção civil por meio do Light Steel Frame.",
 		image: "/visits/smart.webp",
+		imageTone: "servicos",
+		requirementTitle: "Orientações preliminares",
+		requirements: [
+			"Documento original com foto",
+			"Chegada com antecedência",
+			"Demais regras serão confirmadas pela organização",
+		],
+	},
+	{
+		category: "Serviços e Outros",
+		title: "Unimed",
+		location:
+			"Conheça os bastidores de uma estrutura de saúde onde cuidado, tecnologia e gestão se encontram para transformar a experiência dos pacientes.",
+		image: "/visits/unimed.webp",
 		imageTone: "servicos",
 		requirementTitle: "Orientações preliminares",
 		requirements: [
