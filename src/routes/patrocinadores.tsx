@@ -55,6 +55,11 @@ const sponsorSections: SponsorSection[] = [
 				src: "/sponsors/logos/loja-da-info-3d.webp",
 				size: "large",
 			},
+			{
+				name: "Box Studio",
+				src: "/sponsors/logos/box-video.webp",
+				size: "large",
+			},
 		],
 	},
 	{
@@ -79,11 +84,6 @@ const sponsorSections: SponsorSection[] = [
 			{
 				name: "Ruivo Fotografia",
 				src: "/sponsors/logos/ruivo.webp",
-				size: "large",
-			},
-			{
-				name: "Box Vídeo",
-				src: "/sponsors/logos/box-video.webp",
 				size: "large",
 			},
 			{

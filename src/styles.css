@@ -2732,9 +2732,13 @@ body:has(.event-home) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .sponsors-tier--master .sponsors-logo-grid,
-  .sponsors-tier--ouro .sponsors-logo-grid {
+  .sponsors-tier--master .sponsors-logo-grid {
     grid-template-columns: minmax(18rem, 30rem);
+    justify-content: center;
+  }
+
+  .sponsors-tier--ouro .sponsors-logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 30rem));
     justify-content: center;
   }
 

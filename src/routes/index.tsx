@@ -112,7 +112,7 @@ const sponsorLogos = [
 	},
 	{
 		id: "box-video",
-		name: "Box Vídeo",
+		name: "Box Studio",
 		src: "/sponsors/logos/box-video.webp",
 		variant: "box",
 	},
