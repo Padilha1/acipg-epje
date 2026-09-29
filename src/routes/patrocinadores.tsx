@@ -50,6 +50,11 @@ const sponsorSections: SponsorSection[] = [
 				src: "/sponsors/logos/mercado-moveis.webp",
 				size: "large",
 			},
+			{
+				name: "LojadaInfo3D",
+				src: "/sponsors/logos/loja-da-info-3d.webp",
+				size: "large",
+			},
 		],
 	},
 	{
@@ -114,6 +119,11 @@ const sponsorSections: SponsorSection[] = [
 			{
 				name: "RL Jewelry",
 				src: "/sponsors/logos/rl-jewelry.webp",
+				size: "large",
+			},
+			{
+				name: "Dr. Salva",
+				src: "/sponsors/logos/dr-salva.webp",
 				size: "large",
 			},
 			{
@@ -198,6 +208,11 @@ const sponsorSections: SponsorSection[] = [
 			{
 				name: "DNA Contabilidade",
 				src: "/sponsors/logos/dna-contabilidade.webp",
+				size: "large",
+			},
+			{
+				name: "Copynhos",
+				src: "/sponsors/logos/copynhos.webp",
 				size: "large",
 			},
 		],

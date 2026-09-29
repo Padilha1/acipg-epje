@@ -81,6 +81,12 @@ const sponsorLogos = [
 		variant: "wide",
 	},
 	{
+		id: "loja-da-info-3d",
+		name: "LojadaInfo3D",
+		src: "/sponsors/logos/loja-da-info-3d.webp",
+		variant: "wide",
+	},
+	{
 		id: "slaviero",
 		name: "Slaviero",
 		src: "/sponsors/logos/slaviero.webp",
@@ -151,6 +157,12 @@ const sponsorLogos = [
 		name: "RL Jewelry",
 		src: "/sponsors/logos/rl-jewelry.webp",
 		variant: "square",
+	},
+	{
+		id: "dr-salva",
+		name: "Dr. Salva",
+		src: "/sponsors/logos/dr-salva.webp",
+		variant: "wide",
 	},
 	{
 		id: "rogerio-junior",
@@ -246,6 +258,12 @@ const sponsorLogos = [
 		id: "dna-contabilidade",
 		name: "DNA Contabilidade",
 		src: "/sponsors/logos/dna-contabilidade.webp",
+		variant: "wide",
+	},
+	{
+		id: "copynhos",
+		name: "Copynhos",
+		src: "/sponsors/logos/copynhos.webp",
 		variant: "wide",
 	},
 	{
