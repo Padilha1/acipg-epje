@@ -142,7 +142,7 @@ const sponsorLogos = [
 	},
 	{
 		id: "pelissari",
-		name: "Pelissari",
+		name: "Pellissari",
 		src: "/sponsors/logos/pelissari.webp",
 		variant: "wide",
 	},

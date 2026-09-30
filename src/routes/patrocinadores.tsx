@@ -107,7 +107,7 @@ const sponsorSections: SponsorSection[] = [
 				size: "large",
 			},
 			{
-				name: "Pelissari",
+				name: "Pellissari",
 				src: "/sponsors/logos/pelissari.webp",
 				size: "large",
 			},
