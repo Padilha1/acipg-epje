@@ -334,6 +334,7 @@ function Home() {
 						".event-timeline li",
 						".schedule-layout__media",
 						".official-hotel",
+						".event-speakers__card",
 						".event-final-cta__panel",
 					],
 					{ clearProps: "all" },
@@ -413,6 +414,16 @@ function Home() {
 				y: 26,
 			});
 
+			revealGroup(
+				"#palestrantes",
+				".event-speakers__card",
+				{
+					y: 32,
+					duration: 0.72,
+				},
+				0.12,
+			);
+
 			revealGroup("#hospedagem", ".official-hotel", {
 				y: 38,
 				scale: 0.97,
@@ -445,10 +456,10 @@ function Home() {
 						<div className="event-hero__content" data-home-reveal>
 							<h1>Venha viver experiências marcantes em Ponta&nbsp;Grossa</h1>
 							<p>
-								<strong>16 e 17 de outubro de 2026.</strong>{" "}
-								Uma imersão técnica exclusiva nas maiores referências
-								industriais e agrícolas do Paraná. Conhecimento prático,
-								networking de alto nível e inovação.
+								<strong>16 e 17 de outubro de 2026.</strong> Uma imersão técnica
+								exclusiva nas maiores referências industriais e agrícolas do
+								Paraná. Conhecimento prático, networking de alto nível e
+								inovação.
 							</p>
 							<div className="event-actions">
 								<a
@@ -550,7 +561,11 @@ function Home() {
 													.join(" ")}
 												key={`${sponsor.id}-${groupIndex}`}
 											>
-												<img src={sponsor.src} alt={sponsor.name} loading="lazy" />
+												<img
+													src={sponsor.src}
+													alt={sponsor.name}
+													loading="lazy"
+												/>
 											</div>
 										))}
 									</div>
@@ -611,9 +626,52 @@ function Home() {
 								regras específicas de cada visita antes de definir sua rota.
 							</p>
 						</div>
-						<a className="event-button event-button--primary" href="/visitas-tecnicas">
+						<a
+							className="event-button event-button--primary"
+							href="/visitas-tecnicas"
+						>
 							Ver visitas técnicas <ArrowRight size={14} />
 						</a>
+					</div>
+				</section>
+
+				<section
+					className="event-section event-speakers"
+					id="palestrantes"
+					aria-labelledby="speakers-title"
+				>
+					<div className="event-container">
+						<div className="event-section__heading event-speakers__heading">
+							<h2 id="speakers-title">Nossos palestrantes na AGO</h2>
+						</div>
+						<div className="event-speakers__grid">
+							<article className="event-speakers__card">
+								<img
+									src="/speakers/adriano-ono.webp"
+									alt="Adriano Ono"
+									loading="lazy"
+									width="1066"
+									height="1600"
+								/>
+								<div className="event-speakers__caption">
+									<h3>Adriano Ono</h3>
+									<p>Fundador da Dog King</p>
+								</div>
+							</article>
+							<article className="event-speakers__card">
+								<img
+									src="/speakers/marcio-pauliki.webp"
+									alt="Márcio Pauliki"
+									loading="lazy"
+									width="852"
+									height="1280"
+								/>
+								<div className="event-speakers__caption">
+									<h3>Márcio Pauliki</h3>
+									<p>CEO do Grupo MM</p>
+								</div>
+							</article>
+						</div>
 					</div>
 				</section>
 
@@ -659,8 +717,9 @@ function Home() {
 											<CheckCircle2 size={14} /> Cupom de desconto: EPJE15
 										</li>
 										<li>
-											<CheckCircle2 size={14} /> Condições especiais para grupos a
-											partir de 15 quartos. Falar com Cassiano: (42) 99124-9720
+											<CheckCircle2 size={14} /> Condições especiais para grupos
+											a partir de 15 quartos. Falar com Cassiano: (42)
+											99124-9720
 										</li>
 									</ul>
 									<a
