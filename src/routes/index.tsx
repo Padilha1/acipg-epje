@@ -87,6 +87,18 @@ const sponsorLogos = [
 		variant: "wide",
 	},
 	{
+		id: "parque-vila-velha",
+		name: "Parque Vila Velha",
+		src: "/sponsors/logos/parque-vila-velha.webp",
+		variant: "wide",
+	},
+	{
+		id: "sistema-fiep",
+		name: "Sistema Fiep",
+		src: "/sponsors/logos/sistema-fiep.webp",
+		variant: "wide",
+	},
+	{
 		id: "slaviero",
 		name: "Slaviero",
 		src: "/sponsors/logos/slaviero.webp",
@@ -264,6 +276,18 @@ const sponsorLogos = [
 		id: "copynhos",
 		name: "Copynhos",
 		src: "/sponsors/logos/copynhos.webp",
+		variant: "wide",
+	},
+	{
+		id: "trium",
+		name: "Tríum",
+		src: "/sponsors/logos/trium.webp",
+		variant: "square",
+	},
+	{
+		id: "lions-startups",
+		name: "Lions Startups",
+		src: "/sponsors/logos/lions-startups.webp",
 		variant: "wide",
 	},
 	{

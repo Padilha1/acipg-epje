@@ -60,6 +60,16 @@ const sponsorSections: SponsorSection[] = [
 				src: "/sponsors/logos/box-video.webp",
 				size: "large",
 			},
+			{
+				name: "Parque Vila Velha",
+				src: "/sponsors/logos/parque-vila-velha.webp",
+				size: "large",
+			},
+			{
+				name: "Sistema Fiep",
+				src: "/sponsors/logos/sistema-fiep.webp",
+				size: "large",
+			},
 		],
 	},
 	{
@@ -213,6 +223,16 @@ const sponsorSections: SponsorSection[] = [
 			{
 				name: "Copynhos",
 				src: "/sponsors/logos/copynhos.webp",
+				size: "large",
+			},
+			{
+				name: "Tríum",
+				src: "/sponsors/logos/trium.webp",
+				size: "large",
+			},
+			{
+				name: "Lions Startups",
+				src: "/sponsors/logos/lions-startups.webp",
 				size: "large",
 			},
 		],
