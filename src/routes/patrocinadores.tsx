@@ -168,6 +168,11 @@ const sponsorSections: SponsorSection[] = [
 		title: "Bronze",
 		logos: [
 			{
+				name: "Ailos Cooperativa Civia",
+				src: "/sponsors/logos/ailos-civia.webp",
+				size: "large",
+			},
+			{
 				name: "Rogério Junior",
 				src: "/sponsors/logos/rogerio-junior.webp",
 			},
@@ -241,11 +246,6 @@ const sponsorSections: SponsorSection[] = [
 		id: "apoiadores",
 		title: "Apoiadores",
 		logos: [
-			{
-				name: "Diário dos Campos",
-				src: "/sponsors/logos/diario-dos-campos.webp",
-				emphasis: "supporter",
-			},
 			{
 				name: "Mediar",
 				src: "/sponsors/logos/mediar.webp",

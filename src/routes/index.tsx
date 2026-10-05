@@ -57,6 +57,12 @@ const quickLinks = [
 
 const sponsorLogos = [
 	{
+		id: "ailos-civia",
+		name: "Ailos Cooperativa Civia",
+		src: "/sponsors/logos/ailos-civia.webp",
+		variant: "wide",
+	},
+	{
 		id: "inbix",
 		name: "Inbix",
 		src: "/sponsors/logos/inbix.webp",

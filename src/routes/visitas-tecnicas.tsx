@@ -325,6 +325,8 @@ const visits = [
 
 const categories = Array.from(new Set(visits.map((visit) => visit.category)));
 const visitsThatAllowChildren = new Set([
+	"Aula Show Brigatta",
+	"Outback",
 	"Estação Hub",
 	"Inbix",
 	"Pellissari Fluidez Digital + Rivus",
