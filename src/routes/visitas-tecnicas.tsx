@@ -107,6 +107,20 @@ const visits = [
 	},
 	{
 		category: "Indústria",
+		title: "Madero Indústria — Ponta Grossa",
+		location:
+			"Conheça a cozinha central do Madero em Ponta Grossa e os bastidores da produção de alimentos, conectando operação industrial, qualidade e logística.",
+		image: "/visits/madero.webp",
+		imageTone: "industria",
+		requirementTitle: "Orientações preliminares",
+		requirements: [
+			"Documento original com foto",
+			"Calçado fechado",
+			"Demais regras serão confirmadas pela organização",
+		],
+	},
+	{
+		category: "Indústria",
 		title: "Heineken",
 		location:
 			"Viva a experiência Inside the Star e conheça por dentro o processo produtivo, a operação e os bastidores de uma das maiores cervejarias do mundo.",

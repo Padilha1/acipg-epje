@@ -168,6 +168,11 @@ const sponsorSections: SponsorSection[] = [
 		title: "Bronze",
 		logos: [
 			{
+				name: "BNI Campos Gerais",
+				src: "/sponsors/logos/bni.webp",
+				size: "large",
+			},
+			{
 				name: "Ailos Cooperativa Civia",
 				src: "/sponsors/logos/ailos-civia.webp",
 				size: "large",

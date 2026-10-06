@@ -57,6 +57,12 @@ const quickLinks = [
 
 const sponsorLogos = [
 	{
+		id: "bni",
+		name: "BNI Campos Gerais",
+		src: "/sponsors/logos/bni.webp",
+		variant: "wide",
+	},
+	{
 		id: "ailos-civia",
 		name: "Ailos Cooperativa Civia",
 		src: "/sponsors/logos/ailos-civia.webp",
