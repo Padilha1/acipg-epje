@@ -252,6 +252,10 @@ const sponsorSections: SponsorSection[] = [
 		title: "Apoiadores",
 		logos: [
 			{
+				name: "Zero Resíduos",
+				src: "/sponsors/logos/zero-residuos.webp",
+			},
+			{
 				name: "Mediar",
 				src: "/sponsors/logos/mediar.webp",
 			},

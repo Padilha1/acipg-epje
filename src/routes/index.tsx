@@ -29,12 +29,12 @@ const slavieroBookingUrl =
 
 const schedule = [
 	[
-		"12:00",
+		"12:30",
 		"Abertura e credenciamento",
 		"Recepção dos participantes, abertura oficial e retirada dos materiais.",
 	],
 	[
-		"14:00",
+		"13:30 às 14:00",
 		"Saída para visitas técnicas",
 		"Organização dos grupos e saída para as atividades técnicas.",
 	],

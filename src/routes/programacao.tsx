@@ -67,7 +67,7 @@ const scheduleDays: ScheduleDay[] = [
 			"O primeiro dia reúne credenciamento, visitas técnicas no período da tarde e integração no happy hour.",
 		events: [
 			{
-				time: "12:00",
+				time: "12:30",
 				track: "Credenciamento",
 				category: "Abertura",
 				title: "Abertura e credenciamento",
@@ -78,7 +78,7 @@ const scheduleDays: ScheduleDay[] = [
 				icon: Clock3,
 			},
 			{
-				time: "14:00",
+				time: "13:30 às 14:00",
 				track: "Visitas Técnicas",
 				category: "Rotas Técnicas",
 				title: "Saída para visitas técnicas",
