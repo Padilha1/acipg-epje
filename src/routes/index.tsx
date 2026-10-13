@@ -57,6 +57,12 @@ const quickLinks = [
 
 const sponsorLogos = [
 	{
+		id: "primor",
+		name: "Primor Comunicação Visual",
+		src: "/sponsors/logos/primor.webp",
+		variant: "wide",
+	},
+	{
 		id: "bni",
 		name: "BNI Campos Gerais",
 		src: "/sponsors/logos/bni.webp",

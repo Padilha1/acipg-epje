@@ -77,6 +77,11 @@ const sponsorSections: SponsorSection[] = [
 		title: "Prata",
 		logos: [
 			{
+				name: "Primor Comunicação Visual",
+				src: "/sponsors/logos/primor.webp",
+				size: "large",
+			},
+			{
 				name: "Slaviero",
 				src: "/sponsors/logos/slaviero.webp",
 				size: "large",
@@ -117,18 +122,8 @@ const sponsorSections: SponsorSection[] = [
 				size: "large",
 			},
 			{
-				name: "Pellissari",
-				src: "/sponsors/logos/pelissari.webp",
-				size: "large",
-			},
-			{
 				name: "Royal Fit",
 				src: "/sponsors/logos/royal-fit.webp",
-				size: "large",
-			},
-			{
-				name: "RL Jewelry",
-				src: "/sponsors/logos/rl-jewelry.webp",
 				size: "large",
 			},
 			{
@@ -167,6 +162,16 @@ const sponsorSections: SponsorSection[] = [
 		id: "bronze",
 		title: "Bronze",
 		logos: [
+			{
+				name: "Pellissari",
+				src: "/sponsors/logos/pelissari.webp",
+				size: "large",
+			},
+			{
+				name: "RL Jewelry",
+				src: "/sponsors/logos/rl-jewelry.webp",
+				size: "large",
+			},
 			{
 				name: "BNI Campos Gerais",
 				src: "/sponsors/logos/bni.webp",
