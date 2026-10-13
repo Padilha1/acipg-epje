@@ -107,21 +107,6 @@ const sponsorSections: SponsorSection[] = [
 				size: "large",
 			},
 			{
-				name: "Sorriluz",
-				src: "/sponsors/logos/sorriluz.webp",
-				size: "large",
-			},
-			{
-				name: "Localize Painéis",
-				src: "/sponsors/logos/localize-paineis.webp",
-				size: "large",
-			},
-			{
-				name: "Izmart Brasil",
-				src: "/sponsors/logos/izmart.webp",
-				size: "large",
-			},
-			{
 				name: "Royal Fit",
 				src: "/sponsors/logos/royal-fit.webp",
 				size: "large",
@@ -163,6 +148,21 @@ const sponsorSections: SponsorSection[] = [
 		title: "Bronze",
 		logos: [
 			{
+				name: "Sorriluz",
+				src: "/sponsors/logos/sorriluz.webp",
+				size: "large",
+			},
+			{
+				name: "Localize Painéis",
+				src: "/sponsors/logos/localize-paineis.webp",
+				size: "large",
+			},
+			{
+				name: "Izmart Brasil",
+				src: "/sponsors/logos/izmart.webp",
+				size: "large",
+			},
+			{
 				name: "Pellissari",
 				src: "/sponsors/logos/pelissari.webp",
 				size: "large",
@@ -190,10 +190,6 @@ const sponsorSections: SponsorSection[] = [
 				name: "Kaiser Tech",
 				src: "/sponsors/logos/kaiser-tech.webp",
 				size: "large",
-			},
-			{
-				name: "Win Target",
-				src: "/sponsors/logos/win-target.webp",
 			},
 			{
 				name: "DBL Turismo",
@@ -256,6 +252,10 @@ const sponsorSections: SponsorSection[] = [
 		id: "apoiadores",
 		title: "Apoiadores",
 		logos: [
+			{
+				name: "Win Target",
+				src: "/sponsors/logos/win-target.webp",
+			},
 			{
 				name: "Zero Resíduos",
 				src: "/sponsors/logos/zero-residuos.webp",
